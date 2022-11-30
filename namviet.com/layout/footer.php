@@ -91,6 +91,7 @@
 <script src="public/js/vendor/aos.js"></script>
 <script src="public/js/vendor/jquery.lettering.js"></script>
 <script src="public/js/vendor/jquery.sticky.js"></script>
+<script src="public/js/vendor/jquery.fancybox.min.js"></script>
 <script src="public/js/vendor/TweenMax.min.js"></script>
 <script src="public/js/vendor/ScrollMagic.min.js"></script>
 <script src="public/js/vendor/scrollmagic.animation.gsap.min.js"></script>

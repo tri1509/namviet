@@ -67,46 +67,42 @@
       <div class="row gutter-2">
         <div class="col-md-6" data-aos="fade-up" data-aos-delay="">
           <a href="public/images/img_1.jpg" data-fancybox="gallery">
-            <img src="public/images/img_1.jpg" alt="Image" class="img-fluid">
+            <img src="public/images/img_1.jpg" alt="Image" class="img-fluid" />
           </a>
         </div>
         <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
           <a href="public/images/img_2.jpg" data-fancybox="gallery">
-            <img src="public/images/img_2.jpg" alt="Image" class="img-fluid">
+            <img src="public/images/img_2.jpg" alt="Image" class="img-fluid" />
           </a>
         </div>
         <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
           <a href="public/images/img_1.jpg" data-fancybox="gallery">
-            <img src="public/images/img_1.jpg" alt="Image" class="img-fluid">
+            <img src="public/images/img_1.jpg" alt="Image" class="img-fluid" />
           </a>
         </div>
         <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
           <a href="public/images/img_1.jpg" data-fancybox="gallery">
-            <img src="public/images/img_1.jpg" alt="Image" class="img-fluid">
+            <img src="public/images/img_1.jpg" alt="Image" class="img-fluid" />
           </a>
         </div>
         <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
           <a href="public/images/img_1.jpg" data-fancybox="gallery">
-            <img src="public/images/img_1.jpg" alt="Image" class="img-fluid">
+            <img src="public/images/img_1.jpg" alt="Image" class="img-fluid" />
           </a>
         </div>
         <div class="col-md-6" data-aos="fade-up" data-aos-delay="">
           <a href="public/images/img_1.jpg" data-fancybox="gallery">
-            <img src="public/images/img_1.jpg" alt="Image" class="img-fluid">
+            <img src="public/images/img_1.jpg" alt="Image" class="img-fluid" />
           </a>
         </div>
         <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
           <a href="public/images/img_2.jpg" data-fancybox="gallery">
-            <img src="public/images/img_2.jpg" alt="Image" class="img-fluid">
+            <img src="public/images/img_2.jpg" alt="Image" class="img-fluid" />
           </a>
         </div>
       </div>
     </div>
   </div>
-
-
-
-
 
   <div class="untree_co--site-section py-5 bg-body-darker cta">
     <div class="container">

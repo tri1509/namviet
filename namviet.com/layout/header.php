@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="public/css/vendor/aos.css">
   <link rel="stylesheet" href="public/css/vendor/animate.min.css">
   <link rel="stylesheet" href="public/css/vendor/bootstrap.css">
+  <link rel="stylesheet" href="public/css/vendor/jquery.fancybox.min.css" />
   <link rel="stylesheet" href="public/css/style.css">
   <title>Nam Viet</title>
 </head>
