@@ -50,7 +50,7 @@
           <ul class="site-nav-ul js-clone-nav">
             <li><a href="./">Giới Thiệu</a></li>
             <li class="has-children">
-              <a href="?mod=service">Dịch Vụ</a>
+              <a href="?mod=category">Danh mục</a>
               <ul class="dropdown">
                 <li class="has-children">
                   <a href="#">Thiết Kế Nội Thất</a>
@@ -74,7 +74,7 @@
                 </li>
               </ul>
             </li>
-            <li><a href="rooms.php">Công Trình</a></li>
+            <li><a href="?mod=product">Sản phẩm</a></li>
             <li><a href="?mod=gallery">Trưng bày</a></li>
             <li><a href="?mod=about">Về chúng tôi</a></li>
             <li><a href="?mod=contact">Liên Hệ</a></li>

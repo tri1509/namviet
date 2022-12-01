@@ -19,5 +19,5 @@ $db = array(
     'hostname' => 'localhost',
     'username' => 'root',
     'password' => '',
-    'database' => 'unitop',
+    'database' => 'db_namviet',
 );

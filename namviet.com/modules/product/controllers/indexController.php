@@ -6,17 +6,23 @@ function construct() {
 }
 
 function indexAction() {
+    if(isset($_GET['catid'])){
+        $cat_id = (int) $_GET['catid'];
+    }else{
+        $cat_id = "";
+    }
     
-}
-
-function mainAction() {
-    $cat_id = (int) $_GET['cat_id'];
-    // Lấy thông tin danh mục
-    $info_cat = get_info_cat($cat_id);
-    $data['info_cat'] = $info_cat;
-    //  Lấy danh sách sản phẩm
-    $list_item = get_list_product($cat_id);
-    $data['list_item'] = $list_item;
-    
-    load_view('index', $data);
+    if(!empty($cat_id)) {
+        $show_product = show_product($cat_id);
+        $data['show_product'] = $show_product;
+        $get_cat_name = get_cat($cat_id);
+        $data['get_cat_name'] = $get_cat_name;
+        load_view('showCat',$data);
+    }else {
+        $list_cat = get_cat();
+        $data['list_cat'] = $list_cat;
+        $show_product = show_product($cat_id);
+        $data['show_product'] = $show_product;
+        load_view('index',$data);
+    }
 }

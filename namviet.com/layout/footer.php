@@ -41,8 +41,7 @@
         <p>
           Copyright &copy;<script>
           document.write(new Date().getFullYear());
-          </script> <a href="index.html">Untree.co</a>. All Rights Reserved. Design by <a href="https://untree.co/"
-            target="_blank" class="text-primary">Untree.co</a>
+          </script>
         </p>
       </div>
       <div class="col-md-6 text-md-right">

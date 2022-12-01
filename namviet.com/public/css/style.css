@@ -2351,3 +2351,13 @@ footer .form-subscribe .form-control:focus {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+.home-product__item-img {
+  background-repeat: no-repeat;
+  padding-top: 83%;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  transition: 0.2s;
+  position: relative;
+}

@@ -51,11 +51,17 @@
           <ul class="site-nav-ul js-clone-nav">
             <li><a href="./">Giới Thiệu</a></li>
             <li class="has-children">
-              <a href="?mod=service">Dịch Vụ</a>
+              <a href="?mod=category">Danh mục</a>
               <ul class="dropdown">
-                <li class="has-children">
-                  <a href="#">Thiết Kế Nội Thất</a>
-                  <ul class="dropdown">
+                <?php
+                $list_cat = db_fetch_array("SELECT * FROM `tbl_category`");
+                if (!empty($list_cat)) {
+                  foreach($list_cat as $cat){
+                ?>
+                <li class=".has-children">
+                  <a
+                    href="<?php echo base_url("?mod=product&action=index&catid={$cat['cat_id']}") ?>"><?php echo $cat['cat_name'] ?></a>
+                  <!-- <ul class="dropdown">
                     <li>
                       <a href="#">Thiết Kế Nội Thất A</a>
                     </li>
@@ -65,17 +71,12 @@
                     <li>
                       <a href="#">Thiết Kế Nội Thất C</a>
                     </li>
-                  </ul>
+                  </ul> -->
                 </li>
-                <li>
-                  <a href="#">Trang Trí Nội Thất</a>
-                </li>
-                <li>
-                  <a href="#">Thiết Kế Nội Thất A</a>
-                </li>
+                <?php } } ?>
               </ul>
             </li>
-            <li><a href="rooms.php">Công Trình</a></li>
+            <li><a href="?mod=product">Sản phẩm</a></li>
             <li><a href="?mod=gallery">Trưng bày</a></li>
             <li><a href="?mod=about">Về chúng tôi</a></li>
             <li><a href="?mod=contact">Liên Hệ</a></li>
