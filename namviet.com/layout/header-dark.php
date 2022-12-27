@@ -44,7 +44,7 @@
     <nav class="untree_co--site-nav js-sticky-nav dark">
       <div class="container d-flex align-items-center">
         <div class="logo-wrap">
-          <a href="./" class="untree_co--site-logo">LuxuryHotel</a>
+          <a href="./" class="untree_co--site-logo">Nam Việt</a>
         </div>
         <div class="site-nav-ul-wrap text-center d-none d-lg-block">
           <ul class="site-nav-ul js-clone-nav">
@@ -52,9 +52,15 @@
             <li class="has-children">
               <a href="?mod=category">Danh mục</a>
               <ul class="dropdown">
-                <li class="has-children">
-                  <a href="#">Thiết Kế Nội Thất</a>
-                  <ul class="dropdown">
+                <?php
+                $list_cat = db_fetch_array("SELECT * FROM `tbl_category`");
+                if (!empty($list_cat)) {
+                  foreach($list_cat as $cat){
+                ?>
+                <li class=".has-children">
+                  <a
+                    href="<?php echo base_url("?mod=product&action=index&catid={$cat['cat_id']}") ?>"><?php echo $cat['cat_name'] ?></a>
+                  <!-- <ul class="dropdown">
                     <li>
                       <a href="#">Thiết Kế Nội Thất A</a>
                     </li>
@@ -64,14 +70,9 @@
                     <li>
                       <a href="#">Thiết Kế Nội Thất C</a>
                     </li>
-                  </ul>
+                  </ul> -->
                 </li>
-                <li>
-                  <a href="#">Trang Trí Nội Thất</a>
-                </li>
-                <li>
-                  <a href="#">Thiết Kế Nội Thất A</a>
-                </li>
+                <?php } } ?>
               </ul>
             </li>
             <li><a href="?mod=product">Sản phẩm</a></li>

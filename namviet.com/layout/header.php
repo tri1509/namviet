@@ -45,11 +45,11 @@
     <nav class="untree_co--site-nav js-sticky-nav">
       <div class="container d-flex align-items-center">
         <div class="logo-wrap">
-          <a href="./" class="untree_co--site-logo">LuxuryHotel</a>
+          <a href="./" class="untree_co--site-logo">Nam Việt</a>
         </div>
         <div class="site-nav-ul-wrap text-center d-none d-lg-block">
           <ul class="site-nav-ul js-clone-nav">
-            <li><a href="./">Giới Thiệu</a></li>
+            <li class='active'><a href="./">Giới Thiệu</a></li>
             <li class="has-children">
               <a href="?mod=category">Danh mục</a>
               <ul class="dropdown">
@@ -59,8 +59,9 @@
                   foreach($list_cat as $cat){
                 ?>
                 <li class=".has-children">
-                  <a
-                    href="<?php echo base_url("?mod=product&action=index&catid={$cat['cat_id']}") ?>"><?php echo $cat['cat_name'] ?></a>
+                  <a href="<?php echo base_url("?mod=product&catid={$cat['cat_id']}") ?>">
+                    <?php echo $cat['cat_name'] ; ?>
+                  </a>
                   <!-- <ul class="dropdown">
                     <li>
                       <a href="#">Thiết Kế Nội Thất A</a>

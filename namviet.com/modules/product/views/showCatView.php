@@ -15,7 +15,7 @@
     <div class="untree_co--site-section">
       <div class="container">
         <div class="row justify-content-center text-center pt-0 pb-5">
-          <div class="col-lg-6 section-heading" data-aos="fade-up">
+          <div class="col-lg-6 section-heading">
             <h3 class="text-center"><?php echo $get_cat_name['cat_name'] ?></h3>
           </div>
         </div>
