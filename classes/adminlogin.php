@@ -23,12 +23,11 @@
             $adminPass = mysqli_real_escape_string($this->db->link,$adminPass);
 
             if(empty($adminUser) || empty($adminPass)) {
-                $alert = "Nhập sai";
+                $alert = "Không được để trống !";
                 return $alert;
             }else{
                 $query = "SELECT * FROM tbl_admin WHERE adminUser = '$adminUser' AND adminPass = '$adminPass' LIMIT 1";
                 $result = $this->db->select($query);
-
                 if($result != false) {
                     $value = $result->fetch_assoc();
                     Session::set('adminlogin',true);
@@ -37,8 +36,9 @@
                     Session::set('adminName',$value['adminName']);
                     header('location:index.php');
                 }else {
-                    $alert = "Nhập sai";
+                    $alert = "Tài khoản hoặc mật khẩu không đúng !";
                 }
+                return $alert;
             }
         }
     }

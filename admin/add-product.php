@@ -13,7 +13,11 @@
               <div class="col-6">
                 <div class="form-group">
                   <label for="name">Tên sản phẩm</label>
-                  <input class="form-control" type="text" name="name" id="name">
+                  <input class="form-control" type="text" name="name" id="slug" onkeyup="ChangeToSlug()">
+                </div>
+                <div class="form-group">
+                  <label for="name">Slug</label>
+                  <input class="form-control" type="text" name="slug" id="convert_slug" readonly>
                 </div>
                 <div class="form-group">
                   <label for="name">Giá</label>
@@ -27,14 +31,6 @@
                 </div>
               </div>
             </div>
-
-
-            <div class="form-group">
-              <label for="intro">Chi tiết sản phẩm</label>
-              <textarea name="" class="form-control" id="intro" cols="30" rows="5"></textarea>
-            </div>
-
-
             <div class="form-group">
               <label for="">Danh mục</label>
               <select class="form-control" id="">
@@ -61,9 +57,6 @@
                 </label>
               </div>
             </div>
-
-
-
             <button type="submit" class="btn btn-primary">Thêm mới</button>
           </form>
         </div>

@@ -24,11 +24,19 @@ include '../lib/validation.php';
 </head>
 
 <body>
+  <div id="info"></div>
+  <canvas id="canvas"></canvas>
   <div class="container">
     <div class="form-wrap">
       <div class="form-inner">
         <h1 class="title">Đăng nhập</h1>
-        <p class="caption mb-4">Thông báo</p>
+        <p class="caption mb-4">
+          <?php
+            if(isset($login_check)) {
+              echo $login_check;
+            }
+          ?>
+        </p>
         <form id="form-login" action="" class="pt-3" method="post">
           <div class="form-floating">
             <input type="text" class="form-control" name="adminUser" id="username" placeholder="info@example.com"
