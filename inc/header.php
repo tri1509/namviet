@@ -113,7 +113,7 @@
               </ul>
             </li>
             <li class="has-children">
-              <a href="product.php">Sản phẩm</a>
+              <a href="san-pham">Sản phẩm</a>
               <ul class="dropdown">
                 <li class="has-children">
                   <a href="">

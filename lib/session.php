@@ -44,7 +44,7 @@ public static function checkLogin(){
 
 public static function destroy(){
 session_destroy();
-header("Location:login.html");
+header("Location:login.php");
 }
 }
 ?>
