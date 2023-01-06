@@ -10,7 +10,7 @@
       <i class="arrow fas fa-angle-right"></i>
     </li>
     <li class="nav-link active">
-      <a href="?view=list-product">
+      <a href="list-product.php">
         <div class="nav-link-icon d-inline-flex">
           <i class="far fa-folder"></i>
         </div>

@@ -1,4 +1,16 @@
 <?php include 'inc/header.php';?>
+<?php include '../classes/category.php';?>
+<?php include '../classes/product.php';?>
+<?php include_once '../helpers/format.php';?>
+<?php
+  $fm = new Format();
+  $pd = new product();
+  $pdlist = $pd -> show_product();
+  if(isset($_GET['productid'])){
+    $id = $_GET['productid'];
+    $delpro = $pd->del_product($id);
+  }
+?>
 <div id="page-body" class="d-flex">
   <?php include 'inc/sidebar.php';?>
   <div id="wp-content">
@@ -38,84 +50,46 @@
                 <th scope="col">Tên sản phẩm</th>
                 <th scope="col">Giá</th>
                 <th scope="col">Danh mục</th>
-                <th scope="col">Ngày tạo</th>
+                <th scope="col">Mô tả</th>
                 <th scope="col">Trạng thái</th>
                 <th scope="col">Tác vụ</th>
               </tr>
             </thead>
             <tbody>
+              <?php 
+                if($pdlist) {
+                  $i=0;
+                  while($resule = $pdlist -> fetch_assoc()){
+                    $i++;
+              ?>
               <tr class="">
                 <td>
                   <input type="checkbox">
                 </td>
-                <td>1</td>
-                <td><img src="http://via.placeholder.com/80X80" alt=""></td>
-                <td><a href="#">Samsung Galaxy A51 (8GB/128GB)</a></td>
-                <td>7.790.000₫</td>
-                <td>Điện thoại</td>
-                <td>26:06:2020 14:00</td>
-                <td><span class="badge badge-success">Còn hàng</span></td>
+                <td><?php echo $i ?></td>
+                <td><img src="../public/images/<?php echo $resule['img'] ?>" alt="" width="80"></td>
+                <td><a href="#"><?php echo $resule['name'] ?></a></td>
+                <td><?php echo number_format($resule['price'])."đ" ?></td>
+                <td><?php echo $resule['cat'] ?></td>
+                <td><?php echo $resule['mota'] ?></td>
+                <td><?php 
+                  $tinhtrang = $resule['quantity'];
+                  if($tinhtrang > 0){
+                    echo "<span class='badge badge-success'>Còn hàng</span>";
+                  }else{
+                    echo "<span class='badge badge-dark'>Hết hàng</span>";
+                  }
+                ?>
+                </td>
                 <td>
                   <a href="#" class="btn btn-success btn-sm rounded-0 text-white" type="button" data-toggle="tooltip"
                     data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                  <a href="#" class="btn btn-danger btn-sm rounded-0 text-white" type="button" data-toggle="tooltip"
+                  <a href="?productid=<?php echo $resule['id'] ?>" onclick="return confirm('Bạn có muốn xoá không?')"
+                    class="btn btn-danger btn-sm rounded-0 text-white" type="button" data-toggle="tooltip"
                     data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
                 </td>
               </tr>
-              <tr>
-                <td>
-                  <input type="checkbox">
-                </td>
-                <td>2</td>
-                <td><img src="http://via.placeholder.com/80X80" alt=""></td>
-                <td><a href="#">Điện thoại iPhone 11 Pro Max 64GB</a></td>
-                <td>29.490.000₫</td>
-                <td>Điện thoại</td>
-                <td>26:06:2020 14:00</td>
-                <td><span class="badge badge-dark">Hết hàng</span></td>
-                <td>
-                  <a href="#" class="btn btn-success btn-sm rounded-0 text-white" type="button" data-toggle="tooltip"
-                    data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                  <a href="#" class="btn btn-danger btn-sm rounded-0 text-white" type="button" data-toggle="tooltip"
-                    data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input type="checkbox">
-                </td>
-                <td>3</td>
-                <td><img src="http://via.placeholder.com/80X80" alt=""></td>
-                <td><a href="#">Apple MacBook Pro Touch 2020 i5 512GB (MWP42SA/A)</a></td>
-                <td>47.990.000₫</td>
-                <td>Laptop</td>
-                <td>26:06:2020 14:00</td>
-                <td><span class="badge badge-success">Còn hàng</span></td>
-                <td>
-                  <a href="#" class="btn btn-success btn-sm rounded-0 text-white" type="button" data-toggle="tooltip"
-                    data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                  <a href="#" class="btn btn-danger btn-sm rounded-0 text-white" type="button" data-toggle="tooltip"
-                    data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input type="checkbox">
-                </td>
-                <td>4</td>
-                <td><img src="http://via.placeholder.com/80X80" alt=""></td>
-                <td><a href="#">MacBook Air 2017 128GB (MQD32SA/A)</a></td>
-                <td>19.990.000₫</td>
-                <td>Laptop</td>
-                <td>26:06:2020 14:00</td>
-                <td><span class="badge badge-success">Còn hàng</span></td>
-                <td>
-                  <a href="#" class="btn btn-success btn-sm rounded-0 text-white" type="button" data-toggle="tooltip"
-                    data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                  <a href="#" class="btn btn-danger btn-sm rounded-0 text-white" type="button" data-toggle="tooltip"
-                    data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
-                </td>
-              </tr>
+              <?php } } ?>
             </tbody>
           </table>
           <nav aria-label="Page navigation example">

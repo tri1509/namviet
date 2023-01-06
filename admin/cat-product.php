@@ -1,7 +1,7 @@
 <?php include 'inc/header.php';?>
 <?php include '../classes/category.php';?>
 <?php
-	$cat = new category();		
+	$cat = new category();
 	if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add'])) {
 		$catName = $_POST['catName'];
 		$slug = $_POST['slug'];
@@ -51,23 +51,6 @@
                   <input class="form-control" type="text" name="editslug" id="convert_slug" readonly
                     value="<?php echo $result['slug'] ?>">
                 </div>
-                <div class="form-group">
-                  <label for="">Trạng thái</label>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                      value="option1">
-                    <label class="form-check-label" for="exampleRadios1">
-                      Ẩn
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-                      value="option2" checked>
-                    <label class="form-check-label" for="exampleRadios2">
-                      Công khai
-                    </label>
-                  </div>
-                </div>
                 <input type="submit" name="edit" Value="Cập nhật" class="btn btn-primary">
               </form>
             </div>
@@ -88,7 +71,7 @@
                   <label for="name">Slug</label>
                   <input class="form-control" type="text" name="slug" id="convert_slug" readonly>
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                   <label for="">Trạng thái</label>
                   <div class="form-check">
                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
@@ -104,7 +87,7 @@
                       Công khai
                     </label>
                   </div>
-                </div>
+                </div> -->
                 <input type="submit" name="add" Value="Thêm danh mục" class="btn btn-primary">
               </form>
             </div>
@@ -117,16 +100,16 @@
               Danh sách
             </div>
             <div class="card-body">
-              <table class="table table-striped">
+              <table class="table table-striped" id="DataTable">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">Tên</th>
                     <th scope="col">Đường dẫn</th>
-                    <th scope="col">Action</th>
+                    <th scope="col">Tác vụ</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody class="order_position">
                   <?php
                     $show_cat = $cat -> show_category();
                     if($show_cat){
@@ -134,13 +117,19 @@
                         while($result = $show_cat->fetch_assoc()){
                           $i++;
                   ?>
-                  <tr>
+                  <tr id="<?php echo $result['cat_id'] ?>">
                     <th scope="row"><?php echo $i ?></th>
                     <td><?php echo $result['cat_name'] ?></td>
                     <td><?php echo $result['slug'] ?></td>
-                    <td><a href="?catid=<?php echo $result['cat_id'] ?>">Sửa</a>/<a
-                        href="?delid=<?php echo $result['cat_id'] ?>"
-                        onclick="return confirm('bạn có muốn xoá không?')">Xóa</a></td>
+                    <td>
+                      <a href="?catid=<?php echo $result['cat_id'] ?>"
+                        class="btn btn-success btn-sm rounded-0 text-white" type="button" data-toggle="tooltip"
+                        data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
+                      <a href="?delid=<?php echo $result['cat_id'] ?>"
+                        onclick="return confirm('bạn có muốn xoá không?')"
+                        class="btn btn-danger btn-sm rounded-0 text-white" type="button" data-toggle="tooltip"
+                        data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
+                    </td>
                   </tr>
                   <?php } } ?>
                 </tbody>

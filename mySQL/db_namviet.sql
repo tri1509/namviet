@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 05, 2023 lúc 06:03 PM
+-- Thời gian đã tạo: Th1 06, 2023 lúc 11:03 AM
 -- Phiên bản máy phục vụ: 10.4.24-MariaDB
 -- Phiên bản PHP: 7.4.29
 
@@ -59,7 +59,25 @@ CREATE TABLE `tbl_category` (
 INSERT INTO `tbl_category` (`cat_id`, `cat_name`, `slug`) VALUES
 (1, 'LG', 'lg'),
 (2, 'Ánh sáng', 'anh-sang'),
-(6, 'Điện tử', 'dien-tu');
+(3, 'Điện tử', 'dien-tu'),
+(4, 'phần mềm', 'phan-mem');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `tbl_product`
+--
+
+CREATE TABLE `tbl_product` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `slug` varchar(255) NOT NULL,
+  `cat` int(20) NOT NULL,
+  `price` int(100) NOT NULL,
+  `quantity` int(100) DEFAULT NULL,
+  `mota` text NOT NULL,
+  `img` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -78,6 +96,12 @@ ALTER TABLE `tbl_category`
   ADD PRIMARY KEY (`cat_id`);
 
 --
+-- Chỉ mục cho bảng `tbl_product`
+--
+ALTER TABLE `tbl_product`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT cho các bảng đã đổ
 --
 
@@ -91,7 +115,13 @@ ALTER TABLE `tbl_admin`
 -- AUTO_INCREMENT cho bảng `tbl_category`
 --
 ALTER TABLE `tbl_category`
-  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT cho bảng `tbl_product`
+--
+ALTER TABLE `tbl_product`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
