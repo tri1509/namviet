@@ -64,8 +64,7 @@
                 $query = "UPDATE tbl_category SET cat_name = '$catName',slug = '$slug' WHERE cat_id='$id'";
                 $result = $this->db->update($query);
                 if($result){
-                    $alert= "<span class='text-success text-center'>Đã cập nhật</span>";
-                    return $alert;
+                    header('location:cat-product.php');
                 }else{
                     $alert= "<span class='text-danger text-center'>Cập nhật thất bại</span>";
                     return $alert;
@@ -75,6 +74,16 @@
 
         public function getcatbyId($id){
             $query = "SELECT * FROM tbl_category WHERE cat_id = '$id'";
+            $result = $this->db->select($query);
+            return $result;
+        }
+
+        public function get_name_by_cat($cat_id) {
+            $query = 
+            "SELECT tbl_product.*,tbl_category.cat_name, tbl_category.cat_id
+            FROM tbl_product,tbl_category
+            WHERE tbl_product.cat = tbl_category.cat_id
+            AND tbl_product.cat = '$cat_id' ";
             $result = $this->db->select($query);
             return $result;
         }
