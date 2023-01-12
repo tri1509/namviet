@@ -27,6 +27,9 @@ $domain = $_SERVER['HTTP_HOST'];
 $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
 $url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 $base = "http://localhost/namviet/";
+if (empty($title)){
+  $title = "Nam Viet";
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -50,7 +53,7 @@ $base = "http://localhost/namviet/";
   <link rel="stylesheet" href="public/css/vendor/jquery.fancybox.min.css" />
   <link rel="stylesheet" href="public/css/style.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <title>Nam Viet</title>
+  <title><?php echo $title ?></title>
 </head>
 
 <body>

@@ -1,4 +1,7 @@
-<?php include 'inc/header.php' ?>
+<?php
+  $title = "Tin Tức & Sự Kiện";
+  include 'inc/header.php';
+?>
 <main class="untree_co--site-main">
   <div class="untree_co--site-hero inner-page" style="background-image: url('public/images/slider_2.jpg')">
     <div class="container">
