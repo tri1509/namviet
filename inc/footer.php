@@ -22,14 +22,17 @@
           <div class="col-md-9 ml-auto">
             <div class="row mb-3">
               <div class="col-md-6">
-                <h3>Address</h3>
-                <address>64 Đường số 6. <br> Tam Phú, Thành Phố Thủ Đức.</address>
-              </div>
-              <div class="col-md-6">
-                <h3>phone</h3>
+                <h3>Địa Chỉ</h3>
+                <address>Số 60 đường 771A <br>KDC ĐH Bách Khoa,Phường Phú Hữu , Tp.Thủ Đức</address>
+
+                <h3>Phone</h3>
                 <p>
-                  <a href="#">0904.328.251</a>
+                  <a href="#">0901 579 585</a>
                 </p>
+              </div>
+              <div class="col-md-6 ">
+              <h3>Vị Trí</h3>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.3402054040516!2d106.7446303153344!3d10.861708060582474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527ed4a6028bf%3A0x89573b1272723e7b!2zxJAuIFRhbSBIw6AsIFRhbSBQaMO6LCBUaOG7pyDEkOG7qWMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1673177875197!5m2!1svi!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
           </div>
@@ -80,6 +83,7 @@
     </div>
   </div>
 </div>
+
 <script src="public/js/vendor/jquery-3.3.1.min.js"></script>
 <script src="public/js/vendor/popper.min.js"></script>
 <script src="public/js/vendor/bootstrap.min.js"></script>
@@ -96,6 +100,7 @@
 <script src="public/js/vendor/scrollmagic.animation.gsap.min.js"></script>
 <script src="public/js/vendor/debug.addIndicators.min.js"></script>
 <script src="public/js/main.js"></script>
+<script src="public/js/app.js"></script>
 </body>
 
 </html>

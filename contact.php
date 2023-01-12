@@ -1,4 +1,4 @@
-<?php include 'inc/header-ct.php' ?>
+<?php include 'inc/header.php' ?>
 <main class="untree_co--site-main">
   <div class="untree_co--site-hero inner-page bg-light" style="background-image: url('public/images/slider_2.jpg')">
     <div class="container">
@@ -52,7 +52,7 @@
           </div>
           <div class="media-29190">
             <span class="label">Địa chỉ</span>
-            <p>64 Đường số 6. Tam Phú, Thành Phố Thủ Đức.</p>
+            <p>Số 60 đường 771A KDC ĐH Bách Khoa,Phường Phú Hữu , Tp.Thủ Đức</p>
           </div>
           <div class="media-29190">
             <span class="label">Social</span>

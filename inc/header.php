@@ -16,15 +16,23 @@
 ?>
 <?php
   header("Cache-Control: no-cache, must-revalidate");
-  header("Pragma: no-cache"); 
-  header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); 
+  header("Pragma: no-cache");
+  header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
   header("Cache-Control: max-age=2592000");
+?>
+<?php
+$uri = $_SERVER['REQUEST_URI'];
+$query = $_SERVER['QUERY_STRING'];
+$domain = $_SERVER['HTTP_HOST'];
+$protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+$url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+$base = "http://localhost/namviet/";
 ?>
 <!doctype html>
 <html lang="en">
 
 <head>
-  <base href="http://localhost/namviet/">
+  <base href="<?php echo $base ?>">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Untree.co">
@@ -41,6 +49,7 @@
   <link rel="stylesheet" href="public/css/vendor/bootstrap.css">
   <link rel="stylesheet" href="public/css/vendor/jquery.fancybox.min.css" />
   <link rel="stylesheet" href="public/css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <title>Nam Viet</title>
 </head>
 
@@ -77,16 +86,17 @@
     <div class="site-mobile-inner"></div>
   </nav>
   <div class="untree_co--site-wrap">
-    <nav class="untree_co--site-nav js-sticky-nav">
+    <nav
+      class="untree_co--site-nav js-sticky-nav <?php if($url == $base."ve-chung-toi" || $url == $base."lien-he"){echo "dark";} ?>">
       <div class="container d-flex align-items-center">
         <div class="logo-wrap">
           <a href="./" class="untree_co--site-logo">Nam Việt</a>
         </div>
         <div class="site-nav-ul-wrap text-center d-none d-lg-block">
           <ul class="site-nav-ul js-clone-nav">
-            <li class='active'><a href="./">Giới Thiệu</a></li>
-            <li class="has-children">
-              <a>Danh mục</a>
+            <li class='<?php if($url == $base){echo "active";} ?>'><a href="./">Trang Chủ</a></li>
+            <li class="has-children <?php if($url == $base."dich-vu"){echo "active";} ?>">
+              <a href="dich-vu">Dịch Vụ</a>
               <ul class="dropdown">
                 <?php
                 $show_cat = $cat -> show_category();
@@ -97,22 +107,22 @@
                   <a href="san-pham/<?php echo $result['slug'] ?>">
                     <?php echo $result['cat_name'] ?>
                   </a>
-                  <!-- <ul class="dropdown">
+                  <ul class="dropdown">
                     <li>
-                      <a href="#">Thiết Kế Nội Thất A</a>
+                      <a href="#">Thiết Kế A</a>
                     </li>
                     <li>
-                      <a href="#">Thiết Kế Nội Thất B</a>
+                      <a href="#">Thiết Kế B</a>
                     </li>
                     <li>
-                      <a href="#">Thiết Kế Nội Thất C</a>
+                      <a href="#">Thiết Kế C</a>
                     </li>
-                  </ul> -->
+                  </ul>
                 </li>
                 <?php }} ?>
               </ul>
             </li>
-            <li class="has-children">
+            <li class="has-children <?php if($url == $base."san-pham"){echo "active";} ?>">
               <a href="san-pham">Sản phẩm</a>
               <ul class="dropdown">
                 <li class="has-children">
@@ -149,9 +159,11 @@
                 </li>
               </ul>
             </li>
-            <li><a href="trung-bay">Trưng bày</a></li>
-            <li><a href="about">Về chúng tôi</a></li>
-            <li><a href="lien-he">Liên Hệ</a></li>
+            <li <?php if($url == $base."tin-tuc"){echo "class='active'";} ?>><a href="tin-tuc">Tin Tức & Sự Kiện</a>
+            </li>
+            <li <?php if($url == $base."ve-chung-toi"){echo "class='active'";} ?>><a href="ve-chung-toi">Về chúng
+                tôi</a></li>
+            <li <?php if($url == $base."lien-he"){echo "class='active'";} ?>><a href="lien-he">Liên Hệ</a></li>
           </ul>
         </div>
         <div class="icons-wrap text-md-right">
