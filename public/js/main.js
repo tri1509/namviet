@@ -529,7 +529,7 @@ $(function () {
 
 // top_up
 var offset = 500;
-var duration = 100;
+var duration = 700;
 $(function () {
   $(window).scroll(function () {
     if ($(this).scrollTop() > offset) $("#top-up").fadeIn(duration);
@@ -544,6 +544,3 @@ $(function () {
     );
   });
 });
-
-
-

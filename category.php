@@ -260,7 +260,6 @@
                         </button>
                       </h5>
                     </div>
-
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                       <div class="card-body">
                         Nội thất chung cư thiết kế 2 phòng ngủ đẹp gia đình hoặc căn hộ đơn cho một người, gồm một khu
@@ -316,9 +315,6 @@
                     </div>
                   </div>
                 </div>
-
-
-
                 <div class="row mt-5">
                   <div class="col-12">
                     <h3 class="mb-4">Tại Sao Bạn Nên Chọn Nam Việt?</h3>
@@ -340,9 +336,6 @@
       </div>
     </div>
 
-
-
-
     <div class="container-fluid px-md-0">
       <div class="row no-gutters align-items-stretch room-animate site-section">
         <div class="col-md-7 order-md-2 img-wrap" data-jarallax-element="-100">
@@ -360,19 +353,18 @@
                   nhất sẽ khiến cho ngôi nhà của bạn trở nên rực rỡ và tiện nghi. Có rất nhiều hình mẫu tham khảo cho
                   từng loại nội thất và vật dụng. Ngoài ra còn có các bố trí đặc trưng cho từng căn hộ lớn nhỏ khác
                   nhau.</p>
-
                 <div id="accordion">
                   <div class="card">
                     <div class="card-header" id="headingOne">
                       <h5 class="mb-0">
-                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                          aria-expanded="true" aria-controls="collapseOne">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour"
+                          aria-expanded="true" aria-controls="collapseFour">
                           Collapsible Group Item #1
                         </button>
                       </h5>
                     </div>
 
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div id="collapseFour" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                       <div class="card-body">
                         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
                         3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
@@ -387,13 +379,13 @@
                   <div class="card">
                     <div class="card-header" id="headingTwo">
                       <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                          aria-expanded="false" aria-controls="collapseTwo">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+                          aria-expanded="false" aria-controls="collapseFive">
                           Collapsible Group Item #2
                         </button>
                       </h5>
                     </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                       <div class="card-body">
                         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
                         3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
@@ -408,13 +400,13 @@
                   <div class="card">
                     <div class="card-header" id="headingThree">
                       <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
-                          aria-expanded="false" aria-controls="collapseThree">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"
+                          aria-expanded="false" aria-controls="collapseSix">
                           Collapsible Group Item #3
                         </button>
                       </h5>
                     </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                       <div class="card-body">
                         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
                         3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
@@ -427,7 +419,6 @@
                     </div>
                   </div>
                 </div>
-
 
                 <div class="row mt-5">
                   <div class="col-12">
@@ -475,14 +466,14 @@
                       <div class="card">
                         <div class="card-header" id="headingOne">
                           <h5 class="mb-0">
-                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                              aria-expanded="true" aria-controls="collapseOne">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSeven"
+                              aria-expanded="true" aria-controls="collapseSeven">
                               1. Xác định vị trí lắp điều hòa trước khi hoàn thiện căn hộ
                             </button>
                           </h5>
                         </div>
 
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        <div id="collapseSeven" class="collapse show" aria-labelledby="headingOne"
                           data-parent="#accordion">
                           <div class="card-body">
                             Đối với các căn hộ chung cư thì các nhà thiết kế đã tính toán vị trí lắp đặt điều hòa như
@@ -494,13 +485,13 @@
                       <div class="card">
                         <div class="card-header" id="headingTwo">
                           <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                              aria-expanded="false" aria-controls="collapseTwo">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight"
+                              aria-expanded="false" aria-controls="collapseEight">
                               2. Lựa chọn điều hòa có công suất phù hợp
                             </button>
                           </h5>
                         </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div id="collapseEight" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                           <div class="card-body">
                             Để tính công suất điều hòa cho tất cả các mục đích sử dụng. Cần dựa vào các yếu tố như diện
                             tích, thể tích không gian cần làm lạnh. Thể tích làm lạnh là yếu tố chính được dùng để tính
@@ -513,14 +504,13 @@
                       <div class="card">
                         <div class="card-header" id="headingThree">
                           <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
-                              aria-expanded="false" aria-controls="collapseThree">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine"
+                              aria-expanded="false" aria-controls="collapseNine">
                               3. Lắp đặt điều hòa phải đảm bảo thẩm mỹ
                             </button>
                           </h5>
                         </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                          data-parent="#accordion">
+                        <div id="collapseNine" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                           <div class="card-body">
                             Lựa chọn dàn lạnh phù hợp với diện tích, cấu trúc, thẩm mỹ. Đặc biệt chức năng của từng
                             phòng rất quan trọng để đảm bảo hệ thống điều hòa hoạt động hiệu quả. Trên thị trường hiện
@@ -550,44 +540,41 @@
       </div>
     </div>
 
-
-
-
     <div class="video_perform">
       <div class="untree_co--site-section">
         <div class="container">
           <div class="row justify-content-center text-center pt-0 pb-5">
-            <div class="col-lg-6 section-heading" data-aos="fade-up">
+            <div class="col-lg-6 section-heading">
               <h3 class="text-center">Hình ảnh dự án</h3>
             </div>
           </div>
           <div class="row gutter-2">
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="">
+            <div class="col-md-4" data-aos-delay="">
               <a href="public/images/tc-maylanh.jpg" data-fancybox="gallery">
                 <img src="public/images/tc-maylanh.jpg" alt="Image" class="img-fluid" />
               </a>
             </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-md-4" data-aos-delay="100">
               <a href="public/images/tc-maylanh1.jpg" data-fancybox="gallery">
                 <img src="public/images/tc-maylanh8.jpg" alt="Image" class="img-fluid" />
               </a>
             </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-md-4" data-aos-delay="100">
               <a href="public/images/tc-maylanh2.jpg" data-fancybox="gallery">
                 <img src="public/images/tc-maylanh2.jpg" alt="Image" class="img-fluid" />
               </a>
             </div>
-            <div class="col-md-12" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-md-12" data-aos-delay="200">
               <a href="public/images/tc-maylanh7.jpg" data-fancybox="gallery">
                 <img src="public/images/tc-maylanh3.jpg" alt="Image" class="img-fluid" />
               </a>
             </div>
-            <div class="col-md-3" data-aos="fade-up" data-aos-delay="">
+            <div class="col-md-3" data-aos-delay="">
               <a href="public/images/tc-maylanh5.jpg" data-fancybox="gallery">
                 <img src="public/images/tc-maylanh5.jpg" alt="Image" class="img-fluid" />
               </a>
             </div>
-            <div class="col-md-8" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-md-8" data-aos-delay="100">
               <a href="public/images/tc-maylanh6.jpg" data-fancybox="gallery">
                 <img src="public/images/tc-maylanh6.jpg" alt="Image" class="img-fluid" />
               </a>
@@ -685,22 +672,16 @@
     </div>
   </div>
 
-
-
   <div class="untree_co--site-section py-5 bg-body-darker cta">
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
           <h3 class="m-0 p-0">Mang lại vẻ đẹp tinh tế,sang trọng,Phòng làm việc kết hợp phòng khách. <a
-              href="tel://+123456789012">0901 579 585</a></h3>
+              href="tel://0901579585">0901 579 585</a></h3>
         </div>
       </div>
     </div>
   </div>
   </div>
 </main>
-
-
-
-
 <?php include 'inc/footer.php' ?>

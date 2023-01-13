@@ -1,163 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Document</title>
-</head>
-<style>
-  body{
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: blueviolet;
-  }
-  .accordion{
-    display: flex;
-    background-color: beige;
-    margin: 10px;
-  }
-  .accordion .slide{
-    position: relative;
-    width: 30%;
-    height: 400px;
-    transition:  all .5s ease;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  .accordion .slide:hover{
-    width: 50%;
-  }
-  .accordion .slide::before,
-  .accordion .slide::after{
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .accordion .slide::before{
-    background: linear-gradient(to bottom, transparent, #1772f1c9);
-    opacity: 0;
-    transition: all .5s ease;
-  }
-  .accordion .slide::after{
-    opacity: 1;
-    background-color: rgba(51,51,51, .7);
-    transition: all .5s ease;
-  }
-  .accordion .slide:hover::after{
-    opacity: 0;
-  }
-  .accordion .slide:hover::before{
-    opacity: 1;
-  }
-  .accordion .slide h2{
-    width: 80%;
-    text-align: center;
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    transition: all .4s ease;
-  }
-  .accordion .slide h2 a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 22px;
-    text-transform: uppercase;
-  }
-  .accordion .slide:hover h2{
-    top: 35%;
-  }
-  .accordion .content {
-    position: relative;
-    z-index: 1;
-    top: 70%;
-    text-align: center;
-    opacity: 0;
-  }
-.accordion .slide:hover .content{
-  opacity: 1;
-  top: 45%;
-  transition: all .4s ease .4s;
-}
-.accordion .content p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: white;
-}
-.accordion .slide:nth-child(1){
-  background-image: url('public/images/img-quancf.jpg');
-}
-.accordion .slide:nth-child(2){
-  background-image: url('public/images/img-quancf1.jpg');
-}
-.accordion .slide:nth-child(3){
-  background-image: url('public/images/img-quancf2.jpg');
-}
-.accordion .slide:nth-child(4){
-  background-image: url('public/images/img-quancf3.webp');
-}
-.accordion .slide:nth-child(5){
-  background-image: url('public/images/img-quancf4.jpg');
-}
-
-
-
-</style>
-<body>
-  <div class="accordion">
-    <!-- box-1 -->
-    <div class="slide">
-      <h2><a href="#">Mẫu 1</a></h2>
-      <div class="content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse soluta rerum recusandae voluptatibus similique eveniet dolores perferendis in officiis amet.
-        </p>
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      height: 100vh;
+      padding: 0;
+      margin: 0;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      background-color: blueviolet;
+    }
+    .accordion {
+      display: flex;
+      background-color: beige;
+      margin: 10px;
+    }
+    .accordion .slide {
+      position: relative;
+      width: 30%;
+      height: 400px;
+      transition: all 0.5s ease;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .accordion .slide:hover {
+      width: 50%;
+    }
+    .accordion .slide::before,
+    .accordion .slide::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .accordion .slide::before {
+      background: linear-gradient(to bottom, transparent, #1772f1c9);
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+    .accordion .slide::after {
+      opacity: 1;
+      background-color: rgba(51, 51, 51, 0.7);
+      transition: all 0.5s ease;
+    }
+    .accordion .slide:hover::after {
+      opacity: 0;
+    }
+    .accordion .slide:hover::before {
+      opacity: 1;
+    }
+    .accordion .slide h2 {
+      width: 80%;
+      text-align: center;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      transition: all 0.4s ease;
+    }
+    .accordion .slide h2 a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 22px;
+      text-transform: uppercase;
+    }
+    .accordion .slide:hover h2 {
+      top: 35%;
+    }
+    .accordion .content {
+      position: relative;
+      z-index: 1;
+      top: 70%;
+      text-align: center;
+      opacity: 0;
+    }
+    .accordion .slide:hover .content {
+      opacity: 1;
+      top: 45%;
+      transition: all 0.4s ease 0.4s;
+    }
+    .accordion .content p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: white;
+    }
+    .accordion .slide:nth-child(1) {
+      background-image: url("public/images/img-quancf.jpg");
+    }
+    .accordion .slide:nth-child(2) {
+      background-image: url("public/images/img-quancf1.jpg");
+    }
+    .accordion .slide:nth-child(3) {
+      background-image: url("public/images/img-quancf2.jpg");
+    }
+    .accordion .slide:nth-child(4) {
+      background-image: url("public/images/img-quancf3.webp");
+    }
+    .accordion .slide:nth-child(5) {
+      background-image: url("public/images/img-quancf4.jpg");
+    }
+  </style>
+  <body>
+    <div class="accordion">
+      <!-- box-1 -->
+      <div class="slide">
+        <h2><a href="#">Mẫu 1</a></h2>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse soluta
+            rerum recusandae voluptatibus similique eveniet dolores perferendis
+            in officiis amet.
+          </p>
+        </div>
+      </div>
+      <!-- box-1 -->
+      <div class="slide">
+        <h2><a href="#">Mẫu 2</a></h2>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse soluta
+            rerum recusandae voluptatibus similique eveniet dolores perferendis
+            in officiis amet.
+          </p>
+        </div>
+      </div>
+      <!-- box-1 -->
+      <div class="slide">
+        <h2><a href="#">Mẫu 3</a></h2>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse soluta
+            rerum recusandae voluptatibus similique eveniet dolores perferendis
+            in officiis amet.
+          </p>
+        </div>
+      </div>
+      <!-- box-1 -->
+      <div class="slide">
+        <h2><a href="#">Mẫu 4</a></h2>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse soluta
+            rerum recusandae voluptatibus similique eveniet dolores perferendis
+            in officiis amet.
+          </p>
+        </div>
+      </div>
+      <!-- box-1 -->
+      <div class="slide">
+        <h2><a href="#">Mẫu 5</a></h2>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse soluta
+            rerum recusandae voluptatibus similique eveniet dolores perferendis
+            in officiis amet.
+          </p>
+        </div>
       </div>
     </div>
-    <!-- box-1 -->
-    <div class="slide">
-      <h2><a href="#">Mẫu 2</a></h2>
-      <div class="content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse soluta rerum recusandae voluptatibus similique eveniet dolores perferendis in officiis amet.
-        </p>
-      </div>
-    </div>
-    <!-- box-1 -->
-    <div class="slide">
-      <h2><a href="#">Mẫu 3</a></h2>
-      <div class="content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse soluta rerum recusandae voluptatibus similique eveniet dolores perferendis in officiis amet.
-        </p>
-      </div>
-    </div>
-    <!-- box-1 -->
-    <div class="slide">
-      <h2><a href="#">Mẫu 4</a></h2>
-      <div class="content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse soluta rerum recusandae voluptatibus similique eveniet dolores perferendis in officiis amet.
-        </p>
-      </div>
-    </div>
-    <!-- box-1 -->
-    <div class="slide">
-      <h2><a href="#">Mẫu 5</a></h2>
-      <div class="content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse soluta rerum recusandae voluptatibus similique eveniet dolores perferendis in officiis amet.
-        </p>
-      </div>
-    </div>
-  </div>
-
-
-
-</body>
+  </body>
 </html>

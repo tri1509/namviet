@@ -28,10 +28,10 @@
     <div class="row">
       <div class="col-4">
         <?php if(isset($_GET['catid']) && $_GET['catid']!=NULL){
-            $id = $_GET['catid'];
-            $get_cate_name = $cat->getcatbyId($id);
-            $result = $get_cate_name->fetch_assoc();
-          ?>
+          $id = $_GET['catid'];
+          $get_cate_name = $cat->getcatbyId($id);
+          $result = $get_cate_name->fetch_assoc();
+        ?>
         <div class="card">
           <div class="card-header font-weight-bold">
             Chỉnh sửa danh mục
@@ -56,13 +56,13 @@
         <?php }else{ ?>
         <div class="card">
           <div class="card-header font-weight-bold">
-            Danh mục sản phẩm
+            Thêm dịch vụ
           </div>
           <?php if(isset($insertCat)) {echo $insertCat ; } ?>
           <div class="card-body">
             <form method="post">
               <div class="form-group">
-                <label for="name">Tên danh mục</label>
+                <label for="name">Tên dịch vụ</label>
                 <input class="form-control" type="text" name="catName" id="slug" onkeyup="ChangeToSlug()">
               </div>
               <div class="form-group">

@@ -101,6 +101,280 @@
       </div>
     </div>
   </div>
+  <div class="container">
+    <div class="believe-section">
+      <div class="believe-title">
+        <h2>Tin xem nhiều</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="believe-post">
+            <a href="">
+              <img src="public/images/img-quancf2.jpg" alt="">
+            </a>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="text-believe">
+                  <a href="">Tin Nam Việt</a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="believe-textright">
+                  <strong>759 Lượt xem</strong>
+                </div>
+              </div>
+            </div>
+            <a href="#">
+              <h3 class="fs-18">Thiết Kế Nội Thất Vì Một Cuộc Sống Tốt Đẹp Hơn</h3>
+            </a>
+            <p>Khi mọi người ngày càng dành nhiều thời gian sinh hoạt và làm việc tại nhà như hiện nay, thiết…</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="believe-item">
+            <div class="row">
+              <div class="col-md-5">
+                <div class="image-item">
+                  <a href="#">
+                    <img src="public/images/img-quancf2.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="text-believe">
+                      <a href="#">Tin Nam Việt</a>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="believe-textright">
+                      <strong>560 Lượt xem</strong>
+                    </div>
+                  </div>
+                </div>
+                <a href="">
+                  <h3 class="fs-18">Thiết Kế Nội Thất Vì Một Cuộc Sống Tốt Đẹp Hơn..</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="believe-item">
+            <div class="row">
+              <div class="col-md-5">
+                <div class="image-item">
+                  <a href="#">
+                    <img src="public/images/img-chungcu.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="text-believe">
+                      <a href="#">Tin Nam Việt</a>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="believe-textright">
+                      <strong>560 Lượt xem</strong>
+                    </div>
+                  </div>
+                </div>
+                <a href="">
+                  <h3 class="fs-18">Thiết Kế Nội Thất Vì Một Cuộc Sống Tốt Đẹp Hơn..</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="believe-item">
+            <div class="row">
+              <div class="col-md-5">
+                <div class="image-item">
+                  <a href="#">
+                    <img src="public/images/tc-cua.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="text-believe">
+                      <a href="#">Tin Nam Việt</a>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="believe-textright">
+                      <strong>560 Lượt xem</strong>
+                    </div>
+                  </div>
+                </div>
+                <a href="">
+                  <h3 class="fs-18">Thiết Kế Nội Thất Vì Một Cuộc Sống Tốt Đẹp Hơn..</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="believe-item">
+            <div class="row">
+              <div class="col-md-5">
+                <div class="image-item">
+                  <a href="#">
+                    <img src="public/images/img-quancf2.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="text-believe">
+                      <a href="#">Tin Nam Việt</a>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="believe-textright">
+                      <strong>560 Lượt xem</strong>
+                    </div>
+                  </div>
+                </div>
+                <a href="">
+                  <h3 class="fs-18">Thiết Kế Nội Thất Vì Một Cuộc Sống Tốt Đẹp Hơn..</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="blog-section">
+      <div class="setion-content blog">
+        <div class="title">
+          <h2>Tin Tức & Sự Kiện Mới</h2>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <div class="image-section">
+              <a href="" title="Chi tiết bài viết"> <img src="public/images/img-chungcu.jpg" alt=""></a>
+            </div>
+            <div class="article">
+              <h4>7 bí quyết gắn máy lạnh khi thiết kế nội thất phòng ngủ</h4>
+              <p>Bạn có từng cảm thấy khi ngủ qua đêm ở các khách sạn thì bạn sẽ có giấc ngủ ngon hơn không? Việc này
+                phụ thuộc vào vị trí mà bạn gắn máy lạnh khi thiết kế nội thất phòng ngủ.</p>
+            </div>
+            <div class="blog-view">
+              <a href="" title="Chi tiết bài viết">Xem Chi Tiết Bài Viết</a>
+            </div>
+            <div class="posted-date">
+              <p>07/12/2022</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-section">
+              <a href="" title="Chi tiết bài viết"> <img src="public/images/img-quancf.jpg" alt=""></a>
+            </div>
+            <div class="article">
+              <h4>Yếu tố nào là quan trọng nhất khi thiết kế phòng khách?</h4>
+              <p>Houseland là đơn vị thi công chuyên nghiệp có thể giúp bạn thiết kế phòng khách, phòng ngủ, phòng tắm…
+                theo nhiều phong cách khác nhau.</p>
+            </div>
+            <div class="blog-view">
+              <a href="" title="Chi tiết bài viết">Xem Chi Tiết Bài Viết</a>
+            </div>
+            <div class="posted-date">
+              <p>07/12/2022</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-section">
+              <a href="" title="Chi tiết bài viết"> <img src="public/images/img-chungcu.jpg" alt=""></a>
+            </div>
+            <div class="article">
+              <h4>Những lỗi thiết kế nội thất làm không gian thêm chật hẹp</h4>
+              <p>Một số lỗi thiết kế nội thất cho ngôi nhà nhỏ làm không gian thêm chật hẹp: tạo nhiều vách ngăn, sử
+                dụng vật dụng màu tối….</p>
+            </div>
+            <div class="blog-view">
+              <a href="" title="Chi tiết bài viết">Xem Chi Tiết Bài Viết</a>
+            </div>
+            <div class="posted-date">
+              <p>07/12/2022</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-section">
+              <a href="" title="Chi tiết bài viết"><img src="public/images/img-cuahang.jpg" alt=""></a>
+            </div>
+            <div class="article">
+              <h4>Căn hộ thiết kế phong cách tối giản không tốn nhiều công sức dọn dẹp</h4>
+              <p>Một căn hộ được thiết kế phong cách tối giản, tinh tế, mang tính thẩm mỹ cao và còn giúp cho chủ nhà
+                không mất nhiều công sức để dọn dẹp.</p>
+            </div>
+            <div class="blog-view">
+              <a href="" title="Chi tiết bài viết">Xem Chi Tiết Bài Viết</a>
+            </div>
+            <div class="posted-date">
+              <p>07/12/2022</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-section">
+              <a href="" title="Chi tiết bài viết"> <img src="public/images/img-quancf4.jpg" alt=""></a>
+            </div>
+            <div class="article">
+              <h4>Bí quyết giúp nhà cửa mát mẻ hơn vào mùa nóng</h4>
+              <p>Mùa hè ngoài những cơn mưa thì luôn kèm theo những ngày nắng nóng đổ lửa, Houseland gửi đến bạn một số
+                bí quyết giúp nhà cửa mát mẻ hơn vào mùa nóng của TPHCM.</p>
+            </div>
+            <div class="blog-view">
+              <a href="" title="Chi tiết bài viết">Xem Chi Tiết Bài Viết</a>
+            </div>
+            <div class="posted-date">
+              <p>07/12/2022</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-section">
+              <a href="" title="Chi tiết bài viết"><img src="public/images/img-quancf1.jpg" alt=""> </a>
+            </div>
+            <div class="article">
+              <h4>Kỳ lạ Ngôi nhà ở Nhật chia 13 tầng nhưng không có phòng nào</h4>
+              <p>Không gian các 'tầng' của ngôi nhà này được phân biệt nhờ sự thay đổi của cao độ sàn nhà.</p>
+            </div>
+            <div class="blog-view">
+              <a href="" title="Chi tiết bài viết">Xem Chi Tiết Bài Viết</a>
+            </div>
+            <div class="posted-date">
+              <p>07/12/2022</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+
+
   <div class="gallery_posts">
     <div class="row">
       <div class="container">
@@ -126,13 +400,13 @@
       </div>
     </div>
   </div>
-
+  <div class="clear60"></div>
   <div class="untree_co--site-section py-5 bg-body-darker cta">
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <h3 class="m-0 p-0">If you have any special requests, please feel free to call us. <a
-              href="tel://+123456789012">+12.345.678.9012</a></h3>
+          <h3 class="m-0 p-0">Nếu bạn có bất kỳ yêu cầu đặc biệt, xin vui lòng gọi cho chúng tôi <a
+              href="tel://0901579585">0901 579 585</a></h3>
         </div>
       </div>
     </div>

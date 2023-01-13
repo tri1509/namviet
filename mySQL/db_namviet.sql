@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 06, 2023 lúc 11:03 AM
+-- Thời gian đã tạo: Th1 13, 2023 lúc 05:20 PM
 -- Phiên bản máy phục vụ: 10.4.24-MariaDB
 -- Phiên bản PHP: 7.4.29
 
@@ -57,10 +57,46 @@ CREATE TABLE `tbl_category` (
 --
 
 INSERT INTO `tbl_category` (`cat_id`, `cat_name`, `slug`) VALUES
-(1, 'LG', 'lg'),
-(2, 'Ánh sáng', 'anh-sang'),
-(3, 'Điện tử', 'dien-tu'),
-(4, 'phần mềm', 'phan-mem');
+(2, 'Điện - Điện lạnh', 'dien-dien-lanh'),
+(3, 'Cửa sắt', 'cua-sat'),
+(4, 'Nội thất', 'noi-that');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `tbl_contact`
+--
+
+CREATE TABLE `tbl_contact` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `phone` varchar(11) NOT NULL,
+  `message` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `tbl_contact`
+--
+
+INSERT INTO `tbl_contact` (`id`, `name`, `phone`, `message`) VALUES
+(16, 'Tăng Minh Trí', '025996661', 'Web xấu quá, cần được cải thiện nhiều hơn, chả có gì để xem, cùi mía.');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `tbl_post`
+--
+
+CREATE TABLE `tbl_post` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `slug` varchar(255) NOT NULL,
+  `cat` int(11) NOT NULL,
+  `tomtat` text NOT NULL,
+  `content` text NOT NULL,
+  `noidung` text NOT NULL,
+  `img` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -96,6 +132,18 @@ ALTER TABLE `tbl_category`
   ADD PRIMARY KEY (`cat_id`);
 
 --
+-- Chỉ mục cho bảng `tbl_contact`
+--
+ALTER TABLE `tbl_contact`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `tbl_post`
+--
+ALTER TABLE `tbl_post`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Chỉ mục cho bảng `tbl_product`
 --
 ALTER TABLE `tbl_product`
@@ -118,10 +166,22 @@ ALTER TABLE `tbl_category`
   MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
+-- AUTO_INCREMENT cho bảng `tbl_contact`
+--
+ALTER TABLE `tbl_contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT cho bảng `tbl_post`
+--
+ALTER TABLE `tbl_post`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT cho bảng `tbl_product`
 --
 ALTER TABLE `tbl_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

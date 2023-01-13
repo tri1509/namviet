@@ -2,34 +2,27 @@
   include 'lib/session.php';
   Session::init();
   ob_start();
-?>
-<?php
   include_once 'lib/database.php';
+  include_once 'lib/validation.php';
   include_once 'helpers/format.php';
   spl_autoload_register(function($class){
       include_once "classes/".$class.".php";
   });
-
   $db = new Database();
   $cat = new category();
   $product = new product();
-?>
-<?php
-  header("Cache-Control: no-cache, must-revalidate");
-  header("Pragma: no-cache");
-  header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
-  header("Cache-Control: max-age=2592000");
-?>
-<?php
-$uri = $_SERVER['REQUEST_URI'];
-$query = $_SERVER['QUERY_STRING'];
-$domain = $_SERVER['HTTP_HOST'];
-$protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
-$url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-$base = "http://localhost/namviet/";
-if (empty($title)){
-  $title = "Nam Viet";
-}
+  $ps = new post();
+  $ct = new contact();
+  
+  $uri = $_SERVER['REQUEST_URI'];
+  $query = $_SERVER['QUERY_STRING'];
+  $domain = $_SERVER['HTTP_HOST'];
+  $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+  $url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+  $base = "http://localhost/namviet/";
+  if (empty($title)){
+    $title = "Nam Viet";
+  }
 ?>
 <!doctype html>
 <html lang="en">
