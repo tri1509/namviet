@@ -11,6 +11,11 @@
             $this->db = new Database();
             $this->fm = new Format();
         }
+        public function get_post_by_id($id){
+            $query = "SELECT * FROM tbl_post WHERE id = '$id'";
+            $result = $this->db->select($query);
+            return $result;
+        }
         public function update_post($data,$files,$id) {
             $name = mysqli_real_escape_string($this->db->link, $data['name']);
             $slug = mysqli_real_escape_string($this->db->link,$data['slug']);

@@ -46,41 +46,6 @@ include 'inc/header.php';
       </div>
     </div>
 
-    <div class="countUp">
-      <div class="Counter Counter_menber">
-        <div class="Counter_img">
-          <img src="public/images/icon-duan.png" alt="">
-        </div>
-        <span>+</span>
-        <h1>3300 </h1>
-        <h2>Khách Hàng Ghé Thăm</h2>
-      </div>
-      <div class="Counter Counter_ghetham">
-        <div class="Counter_img">
-          <img src="public/images/icon-ghetham.png" alt="">
-        </div>
-        <span>+</span>
-        <h1>3300</h1>
-        <h2>Bản Thiết Kế</h2>
-      </div>
-      <div class="Counter Counter_thietke">
-        <div class="Counter_img">
-          <img src="public/images/icon-thietke.png" alt="">
-        </div>
-        <span>+</span>
-        <h1>3300</h1>
-        <h2>Dự Án Hoàng Thành</h2>
-      </div>
-      <div class="Counter Counter_hailong">
-        <div class="Counter_img">
-          <img src="public/images/icon-hailong.png" alt="">
-        </div>
-        <span>+</span>
-        <h1>95</h1>
-        <h2>Đánh Giá Hài Lòng</h2>
-      </div>
-    </div>
-
     <div class="wrapper-product">
       <div class="product-menu text-center">
         <div class="container">
@@ -153,7 +118,40 @@ include 'inc/header.php';
         </div>
       </div>
     </div>
-
+    <div class="countUp">
+      <div class="Counter Counter_menber">
+        <div class="Counter_img">
+          <img src="public/images/icon-duan.png" alt="">
+        </div>
+        <span>+</span>
+        <h1>3300 </h1>
+        <h2>Khách Hàng Ghé Thăm</h2>
+      </div>
+      <div class="Counter Counter_ghetham">
+        <div class="Counter_img">
+          <img src="public/images/icon-ghetham.png" alt="">
+        </div>
+        <span>+</span>
+        <h1>3300</h1>
+        <h2>Bản Thiết Kế</h2>
+      </div>
+      <div class="Counter Counter_thietke">
+        <div class="Counter_img">
+          <img src="public/images/icon-thietke.png" alt="">
+        </div>
+        <span>+</span>
+        <h1>3300</h1>
+        <h2>Dự Án Hoàng Thành</h2>
+      </div>
+      <div class="Counter Counter_hailong">
+        <div class="Counter_img">
+          <img src="public/images/icon-hailong.png" alt="">
+        </div>
+        <span>+</span>
+        <h1>95</h1>
+        <h2>Đánh Giá Hài Lòng</h2>
+      </div>
+    </div>
     <div class="untree_co--site-section">
       <div class="container">
         <div class="row">

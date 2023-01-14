@@ -21,7 +21,7 @@
       <?php if(isset($updatepost)){echo $updatepost ;}?>
       <div class="card-body">
         <?php
-          $get_post_by_id = $ps -> getpostbyId($id);
+          $get_post_by_id = $ps -> get_post_by_id($id);
           if($get_post_by_id){
               while($result = $get_post_by_id->fetch_assoc()){
         ?>
@@ -35,7 +35,8 @@
               </div>
               <div class="form-group">
                 <label for="name">Slug</label>
-                <input class="form-control" type="text" name="slug" id="convert_slug" readonly>
+                <input class="form-control" type="text" name="slug" id="convert_slug"
+                  value="<?php echo $result['slug'] ?>" readonly>
               </div>
               <div class="form-group">
                 <label for="name">Content bài viết</label>

@@ -2788,8 +2788,9 @@ footer .form-subscribe .form-control:focus {
   text-decoration: none;
   display: inline-block;
   background-color: #25c5c5;
-  padding: 8px 1px;
+  padding: 8px 12px;
   color: #fff;
+  border-radius: 0px 5px 5px 0px;
   width: 100%;
 }
 .blog-view {
@@ -2820,6 +2821,8 @@ footer .form-subscribe .form-control:focus {
 
 .image-section-link {
   overflow: hidden;
+  padding: 5px !important;
+  border-radius: 0 !important;
 }
 .image-section img {
   transition: 0.7s;
