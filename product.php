@@ -86,10 +86,10 @@ include 'inc/header.php';
         <div class="container">
           <div class="row">
             <?php
-                $show_cat = $cat -> show_category();
-                if($show_cat){
-                    while($result = $show_cat->fetch_assoc()){
-                ?>
+              $show_cat = $cat -> show_category();
+              if($show_cat){
+                while($result = $show_cat->fetch_assoc()){
+              ?>
             <div class="col-md-4">
               <a href="san-pham/<?php echo $result['slug'] ?>" class="fs-18 text-dark readmore">
                 <?php echo $result['cat_name'] ?>
@@ -107,21 +107,30 @@ include 'inc/header.php';
       <div class="blog-section">
         <div class="setion-content blog">
           <div class="cards">
+            <?php
+              $show_post = $ps -> show_post();
+              if($show_post){
+                while($result_post = $show_post->fetch_assoc()){
+              ?>
+
             <div class="card">
               <div class="image-section">
-                <a class="image-section-link" href="" title="Chi tiết bài viết"><img src="public/images/img-chungcu.jpg"
-                    alt=""></a>
+                <a class="image-section-link" href="chi-tiet/<?php echo $result_post['slug'] ?>"
+                  title="Chi tiết bài viết"><img src="public/images/<?php echo $result_post['img'] ?>" alt=""></a>
               </div>
               <div class="article">
-                <h4>Nội Thất Trọn Gói</h4>
-                <strong>Nội Thất Nhà Phố Cao Cấp Đảo Kim Cương, Quận 2</strong>
-                <p>Nội thất nhà phố cao cấp của chị Hằng ở KDC Đảo Kim Cương, Quận 2 không chỉ mang vẻ...</p>
+                <h4><?php echo $result_post['name'] ?></h4>
+                <strong><?php echo $result_post['content'] ?></strong>
+                <p><?php echo $result_post['tomtat'] ?></p>
               </div>
               <div class="blog-view">
-                <a href="" title="Chi tiết bài viết">Chi Tiết Dịch Vụ</a>
+                <a href="chi-tiet/<?php echo $result_post['slug'] ?>" title="Chi tiết bài viết">Chi Tiết</a>
               </div>
             </div>
+
+            <?php } } ?>
           </div>
+
           <nav aria-label="Page navigation example">
             <ul class="pagination">
               <li class="page-item">

@@ -224,8 +224,6 @@
           </div>
         </div>
       </div>
-
-
       <div class="row no-gutters align-items-stretch room-animate site-section">
         <div class="col-md-7 img-wrap" data-jarallax-element="-100">
           <div class="bg-image h-100"

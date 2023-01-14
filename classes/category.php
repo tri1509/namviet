@@ -87,5 +87,15 @@
             $result = $this->db->select($query);
             return $result;
         }
+
+        public function post_get_name_by_cat($cat_id) {
+            $query = 
+            "SELECT tbl_post.*,tbl_category.cat_name, tbl_category.cat_id
+            FROM tbl_post,tbl_category
+            WHERE tbl_post.cat = tbl_category.cat_id
+            AND tbl_post.cat = '$cat_id' ";
+            $result = $this->db->select($query);
+            return $result;
+        }
     }
 ?>

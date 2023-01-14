@@ -6,10 +6,15 @@
   $fm = new Format();
   $ct = new contact();
   $ctlist = $ct -> show_contact();
-  // if(isset($_GET['postid'])){
-  //   $id = $_GET['postid'];
-  //   $delpro = $ps ->del_post($id);
-  // }
+  if(isset($_GET['checkid'])){
+    $checkid = $_GET['checkid'];
+		$time = $_GET['time'];
+    $check_contact = $ct ->check_contact($checkid,$time);
+  }
+  if(isset($_GET['contactid'])){
+    $id = $_GET['contactid'];
+    $del_contact = $ct ->del_contact($id);
+  }
 ?>
 <div id="wp-content">
   <div id="content" class="container-fluid">
@@ -43,16 +48,25 @@
               ?>
             <tr class="">
               <td><?php echo $i ?></td>
-              <td><a href="#"><?php echo $resule['name'] ?></a></td>
-              <td><?php echo $resule['phone'] ?></a></td>
+              <td><?php echo $resule['name'] ?></td>
+              <td><?php echo $resule['phone'] ?></td>
               <td><?php echo $resule['message'] ?></td>
               <td>
-                <a href="edit-post.php?postid=<?php echo $resule['id'] ?>"
-                  class="btn btn-success btn-sm rounded-0 text-white" type="button" data-toggle="tooltip"
-                  data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                <a href="?postid=<?php echo $resule['id'] ?>" onclick="return confirm('Bạn có muốn xoá không?')"
+                <?php
+                $status = $resule['status'];
+                if ($status == 0) {
+                ?>
+                <a href="?checkid=<?php echo $resule['id'] ?>&time=<?php echo $resule['times'] ?>"
+                  class="btn btn-warning btn-sm rounded-0 text-black" type="button" data-toggle="tooltip"
+                  onclick="return confirm('Đã xem')" data-placement="top"><i class="fas fa-times"></i></i>
+                  Chưa xem</a>
+                <?php }else {?>
+                <a class="btn btn-success btn-sm rounded-0 text-black" type="button" data-toggle="tooltip"
+                  data-placement="top"><i class="fa fa-check"></i></i></a>
+                <a href="?contactid=<?php echo $resule['id'] ?>" onclick="return confirm('Bạn có muốn xoá không?')"
                   class="btn btn-danger btn-sm rounded-0 text-white" type="button" data-toggle="tooltip"
                   data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
+                <?php } ?>
               </td>
             </tr>
             <?php } } ?>

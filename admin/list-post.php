@@ -48,18 +48,21 @@
             <tr class="">
               <td><?php echo $i ?></td>
               <td><img src="../public/images/<?php echo $resule['img'] ?>" alt="" width="80"></td>
-              <td><a href="#"><?php echo $resule['name'] ?></a></td>
-              <td><?php echo $resule['slug'] ?></a></td>
+              <td><?php echo $resule['name'] ?></td>
+              <td><?php echo $resule['slug'] ?></td>
               <td><?php
                 $cat_id = $resule['cat'];
-                $namebycat = $cat -> get_name_by_cat($cat_id);
+                $namebycat = $cat -> post_get_name_by_cat($cat_id);
                 if($namebycat) {
                 $result_name = $namebycat -> fetch_assoc();
                 echo $result_name['cat_name'];
               }
               ?></td>
               <td><?php echo $resule['content'] ?></td>
-              <td><?php echo $resule['noidung'] ?></td>
+              <td><?php
+            $htmlspecialchars = $fm -> textShorten($resule['noidung'],100);
+            echo htmlspecialchars($htmlspecialchars);
+            ?></td>
               <td>
                 <a href="edit-post.php?postid=<?php echo $resule['id'] ?>"
                   class="btn btn-success btn-sm rounded-0 text-white" type="button" data-toggle="tooltip"

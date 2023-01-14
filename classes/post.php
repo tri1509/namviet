@@ -56,8 +56,8 @@
                 return $alert;
             }
         }
-        public function getpostbyId($id){
-            $query = "SELECT * FROM tbl_post WHERE id = '$id'";
+        public function get_detail($slug){
+            $query = "SELECT * FROM tbl_post WHERE slug = '$slug'";
             $result = $this->db->select($query);
             return $result;
         }
