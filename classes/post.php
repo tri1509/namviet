@@ -13,6 +13,12 @@
             $this->fm = new Format();
         }
 
+        public function rand_banner(){
+            $query = "SELECT * FROM tbl_banner ORDER BY rand() LIMIT 1";
+            $result = $this->db->select($query);
+            return $result;
+        }
+
         public function show_post_noi_that(){
             $query = "SELECT * FROM tbl_post WHERE cat = 1 ORDER BY id DESC";
             $result = $this->db->select($query);
@@ -87,7 +93,7 @@
             }
         }
         public function get_detail($slug){
-            $query = "SELECT * FROM tbl_post WHERE slug = '$slug'";
+            $query = "SELECT * FROM tbl_post WHERE slug = '$slug' LIMIT 1";
             $result = $this->db->select($query);
             return $result;
         }

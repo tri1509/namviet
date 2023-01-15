@@ -3,7 +3,7 @@
   include 'inc/header.php';
 ?>
 <main class="untree_co--site-main">
-  <div class="untree_co--site-hero inner-page" style="background-image: url('public/images/slider_2.jpg')">
+  <div class="untree_co--site-hero inner-page" style="background-image: url('public/images/pn2.jpg')">
     <div class="container">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center">
@@ -16,15 +16,12 @@
   </div>
 
   <!-- <div class="untree_co--site-section">
-
     <div class="container-fluid px-0">
-
       <div class="row justify-content-center text-center pt-0 pb-5">
         <div class="col-lg-6 section-heading" data-aos="fade-up">
           <h3 class="text-center">Slider Gallery</h3>
         </div>
       </div>
-
       <div class="row align-items-stretch">
         <div class="col-9 relative" data-aos="fade-up" data-aos-delay="">
           <div class="owl-carousel owl-gallery-big">
@@ -33,9 +30,7 @@
             <div class="slide-thumb bg-image" style="background-image: url('public/images/room_2_a.jpg')"></div>
             <div class="slide-thumb bg-image" style="background-image: url('public/images/room_2_b.jpg')"></div>
           </div>
-
           <div class="slider-counter text-center"></div>
-
         </div>
         <div class="col-3 relative" data-aos="fade-up" data-aos-delay="100">
 

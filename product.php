@@ -34,7 +34,7 @@ include 'inc/header.php';
 ?>
 <div class="untree_co--site-wrap">
   <main class="site-untree_co--main">
-    <div class="untree_co--site-hero inner-page" style="background-image: url('public/images/slider_2.jpg')">
+    <div class="untree_co--site-hero inner-page" style="background-image: url('public/images/pk3.jpg')">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-7 text-center">

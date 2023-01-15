@@ -1,7 +1,7 @@
 <?php include 'inc/header.php' ?>
 <div class="untree_co--site-main">
   <div class="owl-carousel owl-hero">
-    <div class="untree_co--site-hero overlay" style="background-image: url('public/images/1.png')">
+    <div class="untree_co--site-hero overlay" style="background-image: url('public/images/pn1.jpg')">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-8">
@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    <div class="untree_co--site-hero overlay" style="background-image: url('public/images/2.png')">
+    <div class="untree_co--site-hero overlay" style="background-image: url('public/images/pn2.jpg')">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-7">
@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    <div class="untree_co--site-hero overlay" style="background-image: url('public/images/1.png')">
+    <div class="untree_co--site-hero overlay" style="background-image: url('public/images/pn3.jpg')">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-10">
