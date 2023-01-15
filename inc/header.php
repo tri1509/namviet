@@ -9,6 +9,7 @@
       include_once "classes/".$class.".php";
   });
   $db = new Database();
+  $fm = new Format();
   $cat = new category();
   $product = new product();
   $ps = new post();
@@ -21,7 +22,7 @@
   $url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
   $base = "http://localhost/namviet/";
   if (empty($title)){
-    $title = "Nam Viet";
+    $title = "Nam Việt - Trang chủ";
   }
 ?>
 <!doctype html>
@@ -94,33 +95,6 @@
             <li class="has-children <?php if($url == $base."dich-vu"){echo "active";} ?>">
               <a href="dich-vu">Dịch Vụ</a>
               <ul class="dropdown">
-                <?php
-                $show_cat = $cat -> show_category();
-                if($show_cat){
-                    while($result = $show_cat->fetch_assoc()){
-                ?>
-                <li class="has-children">
-                  <a href="san-pham/<?php echo $result['slug'] ?>">
-                    <?php echo $result['cat_name'] ?>
-                  </a>
-                  <ul class="dropdown">
-                    <li>
-                      <a href="#">Thiết Kế A</a>
-                    </li>
-                    <li>
-                      <a href="#">Thiết Kế B</a>
-                    </li>
-                    <li>
-                      <a href="#">Thiết Kế C</a>
-                    </li>
-                  </ul>
-                </li>
-                <?php }} ?>
-              </ul>
-            </li>
-            <li class="has-children <?php if($url == $base."san-pham"){echo "active";} ?>">
-              <a href="san-pham">Sản phẩm</a>
-              <ul class="dropdown">
                 <li class="has-children">
                   <a href="">
                     Thiết kế
@@ -153,6 +127,33 @@
                     </li>
                   </ul>
                 </li>
+              </ul>
+            </li>
+            <li class="has-children <?php if($url == $base."san-pham"){echo "active";} ?>">
+              <a href="san-pham">Sản phẩm</a>
+              <ul class="dropdown">
+                <?php
+                $show_cat = $cat -> show_category();
+                if($show_cat){
+                    while($result = $show_cat->fetch_assoc()){
+                ?>
+                <li class="has-children">
+                  <a href="san-pham/<?php echo $result['slug'] ?>">
+                    <?php echo $result['cat_name'] ?>
+                  </a>
+                  <ul class="dropdown">
+                    <li>
+                      <a href="#">Thiết Kế A</a>
+                    </li>
+                    <li>
+                      <a href="#">Thiết Kế B</a>
+                    </li>
+                    <li>
+                      <a href="#">Thiết Kế C</a>
+                    </li>
+                  </ul>
+                </li>
+                <?php }} ?>
               </ul>
             </li>
             <li <?php if($url == $base."tin-tuc"){echo "class='active'";} ?>><a href="tin-tuc">Tin Tức & Sự Kiện</a>

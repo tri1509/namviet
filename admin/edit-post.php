@@ -5,7 +5,7 @@
   <?php
     $ps = new post();	
     $cat = new category();
-    $list_cat = $cat -> show_category();
+    $list_cat = $cat -> show_cat_post();
     if(isset($_GET['postid']) && $_GET['postid']!=NULL){
         $id = $_GET['postid'];
     }
@@ -66,14 +66,18 @@
                       while($result_cat = $list_cat->fetch_assoc()){
                 ?>
               <option <?php 
-                  if($result['cat'] === $result_cat['cat_id']) {
+                  if($result['cat'] === $result_cat['id']) {
                     echo "selected";
                   }
-                ?> value="<?php echo $result_cat['cat_id'] ?>"><?php echo $result_cat['cat_name'] ?></option>
+                ?> value="<?php echo $result_cat['id'] ?>"><?php echo $result_cat['name'] ?></option>
               <?php }} ?>
             </select>
           </div>
-          <div class="input-group mb-3">
+          <div class="form-group">
+            <label for="img">Hỉnh ảnh</label>
+            <input class="form-control" type="text" name="img" id="img" value="<?php echo $result['img'] ?>">
+          </div>
+          <!-- <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text">Tải ảnh lên</span>
             </div>
@@ -81,7 +85,7 @@
               <input type="file" class="custom-file-input" id="inputGroupFile01" name="img">
               <label class="custom-file-label" for="inputGroupFile01">Chọn file</label>
             </div>
-          </div>
+          </div> -->
           <img src="../public/images/<?php echo $result['img'] ?>" alt="" width="250"><br>
           <input type="submit" class="btn btn-primary" value="Cập nhật" name="submit">
         </form>

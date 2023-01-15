@@ -21,6 +21,11 @@
     }else{
       $tomtat = $_POST['tomtat'];
     }
+    if(empty($_POST['img'])) {
+      $error['img'] = "Vui lòng nhập hình ảnh bài viết";
+    }else{
+      $img = $_POST['img'];
+    }
     if(empty($_POST['content'])) {
       $error['content'] = "Vui lòng điền content bài viết";
     }else{
@@ -40,6 +45,7 @@
         'content' => $content,
         'desc' => $desc,
         'slug' => $slug,
+        'img' => $img,
       );
       $insertPost = $ps->insert_post($data,$_FILES);
     }
@@ -101,19 +107,26 @@
             <select class="form-control" name="cat">
               <option>----Chọn danh mục----</option>
               <?php
-                  $cat = new category();
-                  $list_cat = $cat -> show_category();
-                  if($list_cat){
-                      while($result = $list_cat->fetch_assoc()){
-                ?>
-              <option value="<?php echo $result['cat_id'] ?>"><?php echo $result['cat_name'] ?></option>
+                $cat = new category();
+                $list_cat = $cat -> show_cat_post();
+                if($list_cat){
+                  while($result = $list_cat->fetch_assoc()){
+              ?>
+              <option value="<?php echo $result['id'] ?>"><?php echo $result['name'] ?></option>
               <?php }} ?>
             </select>
             <span class='text-danger'>
               <?php if(!empty($error['cat'])) {echo $error['cat'];} ?>
             </span>
           </div>
-          <div class="input-group mb-3">
+          <div class="form-group">
+            <label for="img">Hình ảnh</label>
+            <input class="form-control" type="text" name="img" value="<?php if(!empty($img)){echo $img;}?>">
+            <span class='text-danger'>
+              <?php if(!empty($error['img'])) {echo $error['img'];} ?>
+            </span>
+          </div>
+          <!-- <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text">Tải ảnh lên</span>
             </div>
@@ -121,7 +134,7 @@
               <input type="file" class="custom-file-input" id="inputGroupFile01" name="img">
               <label class="custom-file-label" for="inputGroupFile01"></label>
             </div>
-          </div>
+          </div> -->
           <input type="submit" class="btn btn-primary" value="Thêm mới" name="submit">
         </form>
       </div>

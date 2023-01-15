@@ -17,7 +17,7 @@ if(isset($_GET['slug'])){
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center">
           <div class="site-hero-contents" data-aos="fade-up">
-            <h1 class="hero-heading text-white">Chi Tiết</h1>
+            <h1 class="hero-heading text-white"><?php echo $title ?></h1>
           </div>
         </div>
       </div>

@@ -70,7 +70,7 @@ Session::checkSession();
             <ul class="sub-menu">
               <li><a href="add-product.php">Thêm mới</a></li>
               <li><a href="list-product.php">Danh sách</a></li>
-              <li><a href="cat-product.php">Dịch vụ</a></li>
+              <li><a href="cat-product.php">Danh mục</a></li>
             </ul>
           </li>
           <li class="nav-link active">
@@ -84,6 +84,7 @@ Session::checkSession();
             <ul class="sub-menu">
               <li><a href="add-post.php">Thêm mới</a></li>
               <li><a href="list-post.php">Danh sách</a></li>
+              <li><a href="cat-post.php">Danh mục</a></li>
             </ul>
           </li>
           <li class="nav-link active">

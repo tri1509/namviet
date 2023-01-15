@@ -55,7 +55,7 @@
                 $namebycat = $cat -> post_get_name_by_cat($cat_id);
                 if($namebycat) {
                 $result_name = $namebycat -> fetch_assoc();
-                echo $result_name['cat_name'];
+                echo $result_name['name'];
               }
               ?></td>
               <td><?php echo $resule['content'] ?></td>

@@ -36,6 +36,7 @@
               <th scope="col">Tên khách hàng</th>
               <th scope="col">Số điện thoại</th>
               <th scope="col">Lời nhắn</th>
+              <th scope="col">Thời gian</th>
               <th scope="col">Tác vụ</th>
             </tr>
           </thead>
@@ -51,6 +52,7 @@
               <td><?php echo $resule['name'] ?></td>
               <td><?php echo $resule['phone'] ?></td>
               <td><?php echo $resule['message'] ?></td>
+              <td><?php echo $resule['times'] ?></td>
               <td>
                 <?php
                 $status = $resule['status'];

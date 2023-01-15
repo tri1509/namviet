@@ -45,7 +45,7 @@ include 'inc/header.php';
         </div>
       </div>
     </div>
-
+    <div class="clear40"></div>
     <div class="wrapper-product">
       <div class="product-menu text-center">
         <div class="container">
@@ -56,7 +56,8 @@ include 'inc/header.php';
                 while($result = $show_cat->fetch_assoc()){
               ?>
             <div class="col-md-4">
-              <a href="san-pham/<?php echo $result['slug'] ?>" class="fs-18 text-dark readmore">
+              <a href="san-pham/<?php echo $result['slug'] ?>" title="<?php echo $result['cat_name'] ?>"
+                class="fs-18 text-dark readmore">
                 <?php echo $result['cat_name'] ?>
               </a>
             </div>
@@ -73,15 +74,15 @@ include 'inc/header.php';
         <div class="setion-content blog">
           <div class="cards">
             <?php
-              $show_post = $ps -> show_post();
+              $show_post = $ps -> show_post_noi_that();
               if($show_post){
-                while($result_post = $show_post->fetch_assoc()){
-              ?>
-
+                while($result_post = $show_post->fetch_assoc()){ 
+            ?>
             <div class="card">
               <div class="image-section">
                 <a class="image-section-link" href="chi-tiet/<?php echo $result_post['slug'] ?>"
-                  title="Chi tiết bài viết"><img src="public/images/<?php echo $result_post['img'] ?>" alt=""></a>
+                  title="<?php echo $result_post['name'] ?>"><img src="public/images/<?php echo $result_post['img'] ?>"
+                    alt=""></a>
               </div>
               <div class="article">
                 <h4><?php echo $result_post['name'] ?></h4>
@@ -89,7 +90,9 @@ include 'inc/header.php';
                 <p><?php echo $result_post['tomtat'] ?></p>
               </div>
               <div class="blog-view">
-                <a href="chi-tiet/<?php echo $result_post['slug'] ?>" title="Chi tiết bài viết">Chi Tiết</a>
+                <a href="chi-tiet/<?php echo $result_post['slug'] ?>" title="<?php echo $result_post['name'] ?>">
+                  Chi Tiết
+                </a>
               </div>
             </div>
 

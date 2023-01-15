@@ -3,24 +3,21 @@
 <?php
 	$cat = new category();
 	if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add'])) {
-		$catName = $_POST['catName'];
+		$catName = $_POST['name'];
 		$slug = $_POST['slug'];
-		$insertCat = $cat->insert_category($catName,$slug);
+		$insertCatPost = $cat -> insert_cat_post($catName,$slug);
 	}
   
   if(isset($_GET['delid']) && $_GET['delid']!=NULL){
     $id = $_GET['delid'];
-    $delCat = $cat->del_category($id);
-  }
-
-  if(isset($_GET['catid']) && $_GET['catid']!=NULL){
-    $id = $_GET['catid'];
+    $delCat = $cat->del_cat_post($id);
   }
 
   if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit'])) {
     $catName = $_POST['editcatName'];
 		$slug = $_POST['editslug'];
-    $updateCat = $cat -> update_category($catName,$slug,$id);
+    $id = $_GET['catid'];
+    $updateCat = $cat -> update_cat_post($catName,$slug,$id);
   }
 ?>
 <div id="wp-content">
@@ -29,7 +26,7 @@
       <div class="col-4">
         <?php if(isset($_GET['catid']) && $_GET['catid']!=NULL){
           $id = $_GET['catid'];
-          $get_cate_name = $cat->getcatbyId($id);
+          $get_cate_name = $cat->getcatpostbyId($id);
           $result = $get_cate_name->fetch_assoc();
         ?>
         <div class="card">
@@ -38,11 +35,11 @@
           </div>
           <?php if(isset($updateCat)){echo $updateCat ;}?>
           <div class="card-body">
-            <form method="post">
+            <form method="post" action="">
               <div class="form-group">
                 <label for="name">Sửa tên danh mục</label>
                 <input class="form-control" type="text" name="editcatName" id="slug" onkeyup="ChangeToSlug()"
-                  value="<?php echo $result['cat_name'] ?>">
+                  value="<?php echo $result['name'] ?>">
               </div>
               <div class="form-group">
                 <label for="name">Slug</label>
@@ -56,14 +53,14 @@
         <?php }else{ ?>
         <div class="card">
           <div class="card-header font-weight-bold">
-            Thêm danh mục
+            Thêm danh mục bài viết
           </div>
-          <?php if(isset($insertCat)) {echo $insertCat ; } ?>
+          <?php if(isset($insertCatPost)) {echo $insertCatPost ; } ?>
           <div class="card-body">
             <form method="post">
               <div class="form-group">
-                <label for="name">Tên danh mục</label>
-                <input class="form-control" type="text" name="catName" id="slug" onkeyup="ChangeToSlug()">
+                <label for="name">Tên danh mục bài viết</label>
+                <input class="form-control" type="text" name="name" id="slug" onkeyup="ChangeToSlug()">
               </div>
               <div class="form-group">
                 <label for="name">Slug</label>
@@ -86,7 +83,7 @@
                     </label>
                   </div>
                 </div> -->
-              <input type="submit" name="add" Value="Thêm danh mục" class="btn btn-primary">
+              <input type="submit" name="add" Value="Thêm vào" class="btn btn-primary">
             </form>
           </div>
         </div>
@@ -98,6 +95,7 @@
             Danh sách
           </div>
           <div class="card-body">
+            <?php if(isset($delCat)) {echo $delCat ; } ?>
             <table class="table table-striped" id="DataTable">
               <thead>
                 <tr>
@@ -109,21 +107,21 @@
               </thead>
               <tbody class="order_position">
                 <?php
-                    $show_cat = $cat -> show_category();
-                    if($show_cat){
+                    $show_cat_post = $cat -> show_cat_post();
+                    if($show_cat_post){
                       $i=0; 
-                        while($result = $show_cat->fetch_assoc()){
+                        while($result = $show_cat_post->fetch_assoc()){
                           $i++;
                   ?>
-                <tr id="<?php echo $result['cat_id'] ?>">
+                <tr id="<?php echo $result['id'] ?>">
                   <th scope="row"><?php echo $i ?></th>
-                  <td><?php echo $result['cat_name'] ?></td>
+                  <td><?php echo $result['name'] ?></td>
                   <td><?php echo $result['slug'] ?></td>
                   <td>
-                    <a href="?catid=<?php echo $result['cat_id'] ?>" class="btn btn-success btn-sm rounded-0 text-white"
+                    <a href="?catid=<?php echo $result['id'] ?>" class="btn btn-success btn-sm rounded-0 text-white"
                       type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i
                         class="fa fa-edit"></i></a>
-                    <a href="?delid=<?php echo $result['cat_id'] ?>" onclick="return confirm('bạn có muốn xoá không?')"
+                    <a href="?delid=<?php echo $result['id'] ?>" onclick="return confirm('bạn có muốn xoá không?')"
                       class="btn btn-danger btn-sm rounded-0 text-white" type="button" data-toggle="tooltip"
                       data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
                   </td>

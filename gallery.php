@@ -254,23 +254,30 @@
           <h2>Tin Tức & Sự Kiện Mới</h2>
         </div>
         <div class="cards">
+          <?php
+              $show_post = $ps -> show_post_tin_tuc();
+              if($show_post){
+                while($result_post = $show_post->fetch_assoc()){ 
+            ?>
           <div class="card">
             <div class="image-section">
-              <a class="image-section-link" href="" title="Chi tiết bài viết"> <img src="public/images/img-chungcu.jpg"
+              <a class="image-section-link" href="chi-tiet/<?php echo $result_post['slug'] ?>"
+                title="<?php echo $result_post['name'] ?>"> <img src="public/images/<?php echo $result_post['img'] ?>"
                   alt=""></a>
             </div>
             <div class="article">
-              <h4>7 bí quyết gắn máy lạnh khi thiết kế nội thất phòng ngủ</h4>
-              <p>Bạn có từng cảm thấy khi ngủ qua đêm ở các khách sạn thì bạn sẽ có giấc ngủ ngon hơn không? Việc này
-                phụ thuộc vào vị trí mà bạn gắn máy lạnh khi thiết kế nội thất phòng ngủ.</p>
+              <h4><?php echo $result_post['name'] ?></h4>
+              <p><?php 
+                $rutgon = $fm -> textShorten($result_post['tomtat'],100); 
+                echo $rutgon;
+              ?></p>
             </div>
             <div class="blog-view">
-              <a href="" title="Chi tiết bài viết">Xem Chi Tiết Bài Viết</a>
-            </div>
-            <div class="posted-date">
-              <p>07/12/2022</p>
+              <a href="chi-tiet/<?php echo $result_post['slug'] ?>" title="<?php echo $result_post['name'] ?>">Xem chi
+                tiết</a>
             </div>
           </div>
+          <?php }} ?>
         </div>
       </div>
     </div>
