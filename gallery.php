@@ -1,6 +1,16 @@
 <?php
   $title = "Tin Tức & Sự Kiện";
   include 'inc/header.php';
+  if(!isset($_GET['trang'])) {
+    $trang = 1;
+  }else{
+    $trang = $_GET['trang'];
+  }
+  // echo $trang;
+  $so_sp_trang = 6;
+  $post_all = $ps -> count_post_tin_tuc();
+  $post_count = mysqli_num_rows($post_all);
+  $post_button = $post_count / $so_sp_trang;
 ?>
 <main class="untree_co--site-main">
   <div class="untree_co--site-hero inner-page" style="background-image: url('public/images/pn2.jpg')">
@@ -14,46 +24,6 @@
       </div>
     </div>
   </div>
-
-  <!-- <div class="untree_co--site-section">
-    <div class="container-fluid px-0">
-      <div class="row justify-content-center text-center pt-0 pb-5">
-        <div class="col-lg-6 section-heading" data-aos="fade-up">
-          <h3 class="text-center">Slider Gallery</h3>
-        </div>
-      </div>
-      <div class="row align-items-stretch">
-        <div class="col-9 relative" data-aos="fade-up" data-aos-delay="">
-          <div class="owl-carousel owl-gallery-big">
-            <div class="slide-thumb bg-image" style="background-image: url('public/images/room_1_a.jpg')"></div>
-            <div class="slide-thumb bg-image" style="background-image: url('public/images/room_1_b.jpg')"></div>
-            <div class="slide-thumb bg-image" style="background-image: url('public/images/room_2_a.jpg')"></div>
-            <div class="slide-thumb bg-image" style="background-image: url('public/images/room_2_b.jpg')"></div>
-          </div>
-          <div class="slider-counter text-center"></div>
-        </div>
-        <div class="col-3 relative" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="owl-carousel owl-gallery-small">
-            <div class="slide-thumb bg-image" style="background-image: url('public/images/room_1_a.jpg')"><a
-                href="#"></a>
-            </div>
-            <div class="slide-thumb bg-image" style="background-image: url('public/images/room_1_b.jpg')"><a
-                href="#"></a>
-            </div>
-            <div class="slide-thumb bg-image" style="background-image: url('public/images/room_2_a.jpg')"><a
-                href="#"></a>
-            </div>
-            <div class="slide-thumb bg-image" style="background-image: url('public/images/room_2_b.jpg')"><a
-                href="#"></a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-  </div> -->
   <div class="main-camket">
     <div class="container">
       <div class="row flex-wrap mr-mobile-left">
@@ -97,152 +67,6 @@
     </div>
   </div>
   <div class="container">
-    <div class="believe-section">
-      <div class="believe-title">
-        <h2>Tin xem nhiều</h2>
-      </div>
-      <div class="row">
-        <div class="col-md-8">
-          <div class="believe-post">
-            <a href="">
-              <img src="public/images/img-quancf2.jpg" alt="">
-            </a>
-            <div class="row">
-              <div class="col-md-8">
-                <div class="text-believe">
-                  <a href="">Tin Nam Việt</a>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="believe-textright">
-                  <strong>759 Lượt xem</strong>
-                </div>
-              </div>
-            </div>
-            <a href="#">
-              <h3 class="fs-18">Thiết Kế Nội Thất Vì Một Cuộc Sống Tốt Đẹp Hơn</h3>
-            </a>
-            <p>Khi mọi người ngày càng dành nhiều thời gian sinh hoạt và làm việc tại nhà như hiện nay, thiết…</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="believe-item">
-            <div class="row">
-              <div class="col-md-5">
-                <div class="image-item">
-                  <a href="#">
-                    <img src="public/images/img-quancf2.jpg" alt="">
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-7">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="text-believe">
-                      <a href="#">Tin Nam Việt</a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="believe-textright">
-                      <strong>560 Lượt xem</strong>
-                    </div>
-                  </div>
-                </div>
-                <a href="">
-                  <h3 class="fs-18">Thiết Kế Nội Thất Vì Một Cuộc Sống Tốt Đẹp Hơn..</h3>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="believe-item">
-            <div class="row">
-              <div class="col-md-5">
-                <div class="image-item">
-                  <a href="#">
-                    <img src="public/images/img-chungcu.jpg" alt="">
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-7">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="text-believe">
-                      <a href="#">Tin Nam Việt</a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="believe-textright">
-                      <strong>560 Lượt xem</strong>
-                    </div>
-                  </div>
-                </div>
-                <a href="">
-                  <h3 class="fs-18">Thiết Kế Nội Thất Vì Một Cuộc Sống Tốt Đẹp Hơn..</h3>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="believe-item">
-            <div class="row">
-              <div class="col-md-5">
-                <div class="image-item">
-                  <a href="#">
-                    <img src="public/images/tc-cua.jpg" alt="">
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-7">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="text-believe">
-                      <a href="#">Tin Nam Việt</a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="believe-textright">
-                      <strong>560 Lượt xem</strong>
-                    </div>
-                  </div>
-                </div>
-                <a href="">
-                  <h3 class="fs-18">Thiết Kế Nội Thất Vì Một Cuộc Sống Tốt Đẹp Hơn..</h3>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="believe-item">
-            <div class="row">
-              <div class="col-md-5">
-                <div class="image-item">
-                  <a href="#">
-                    <img src="public/images/img-quancf2.jpg" alt="">
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-7">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="text-believe">
-                      <a href="#">Tin Nam Việt</a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="believe-textright">
-                      <strong>560 Lượt xem</strong>
-                    </div>
-                  </div>
-                </div>
-                <a href="">
-                  <h3 class="fs-18">Thiết Kế Nội Thất Vì Một Cuộc Sống Tốt Đẹp Hơn..</h3>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
     <div class="blog-section">
       <div class="setion-content blog">
         <div class="title">
@@ -250,9 +74,9 @@
         </div>
         <div class="cards">
           <?php
-              $show_post = $ps -> show_post_tin_tuc();
+          $show_post = $ps -> show_post_tin_tuc();
               if($show_post){
-                while($result_post = $show_post->fetch_assoc()){ 
+                while($result_post = $show_post ->fetch_assoc()){ 
             ?>
           <div class="card">
             <div class="image-section">
@@ -268,36 +92,112 @@
               ?></p>
             </div>
             <div class="blog-view">
-              <a href="chi-tiet/<?php echo $result_post['slug'] ?>" title="<?php echo $result_post['name'] ?>">Xem chi
-                tiết</a>
+              <a href="chi-tiet/<?php echo $result_post['slug'] ?>" title="<?php echo $result_post['name'] ?>">
+                Xem chi tiết
+              </a>
             </div>
           </div>
           <?php }} ?>
         </div>
       </div>
     </div>
-    <nav aria-label="Page navigation example">
-      <ul class="pagination">
+    <nav aria-label="Page navigation example ">
+      <ul class="pagination justify-content-center">
+        <?php if($trang >=2){ ?>
         <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
+          <a class="page-link" href="bai-viet/trang-<?php echo $trang - 1 ?>" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
             <span class="sr-only">Previous</span>
           </a>
         </li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <?php } ?>
+        <?php
+          for($i=1 ; $i <= ceil($post_button) ; $i++) {
+        ?>
+        <li class="page-item <?php if ($i == $trang) { echo "active"; } ?>">
+          <a class="page-link" href="bai-viet/trang-<?php echo $i ?>">
+            <?php echo $i ?>
+          </a>
+        </li>
+        <?php } ?>
+        <?php if ($trang < ceil($post_button)){ ?>
         <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
+          <a class="page-link" href="bai-viet/trang-<?php echo $trang + 1 ?>" aria-label="Next">
             <span aria-hidden="true">&raquo;</span>
             <span class="sr-only">Next</span>
           </a>
         </li>
+        <?php } ?>
+
       </ul>
     </nav>
+    <div class="believe-section">
+      <div class="believe-title">
+        <h2>Tin xem nhiều</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="believe-post">
+            <a href="chi-tiet/thiet-ke-noi-that-vi-mot-cuoc-song-tot-dep-hon">
+              <img src="public/images/img-quancf2.jpg" alt="">
+            </a>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="text-believe">
+                  <a href="">Tin Nam Việt</a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="believe-textright">
+                  <strong>759 Lượt xem</strong>
+                </div>
+              </div>
+            </div>
+            <a href="chi-tiet/thiet-ke-noi-that-vi-mot-cuoc-song-tot-dep-hon">
+              <h3 class="fs-18">Thiết Kế Nội Thất Vì Một Cuộc Sống Tốt Đẹp Hơn</h3>
+            </a>
+            <p>Khi mọi người ngày càng dành nhiều thời gian sinh hoạt và làm việc tại nhà như hiện nay, thiết…</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <?php
+              $show_post_rand = $ps -> show_post_tin_tuc_rand_4();
+              if($show_post_rand){
+                while($result_post_rand = $show_post_rand->fetch_assoc()){ 
+            ?>
+          <div class="believe-item">
+            <div class="row">
+              <div class="col-md-5">
+                <div class="image-item">
+                  <a href="chi-tiet/<?php echo $result_post_rand['slug'] ?>">
+                    <img src="public/images/<?php echo $result_post_rand['img'] ?>" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="text-believe">
+                      <a href="tin-tuc">Tin Nam Việt</a>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="believe-textright">
+                      <strong></strong>
+                    </div>
+                  </div>
+                </div>
+                <a href="chi-tiet/<?php echo $result_post_rand['slug'] ?>">
+                  <h3 class="fs-18"><?php echo $result_post_rand['name'] ?></h3>
+                </a>
+              </div>
+            </div>
+          </div>
+          <?php } } ?>
+        </div>
+      </div>
+    </div>
   </div>
-
-
 
   <div class="gallery_posts">
     <div class="row">

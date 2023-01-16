@@ -53,22 +53,22 @@
 <body>
   <div id="untree_co--overlayer"></div>
   <?php
-  if (session_id() === '')
-  session_start();
-  if( isset( $_SESSION['popup'] ) ){
-      $_SESSION['popup'] += 1;
-  }else{
-      $_SESSION['popup'] = 1;
-  }
-  $luotvao = $_SESSION['popup'];
-  if ($luotvao == '1') {
+  // if (session_id() === '')
+  // session_start();
+  // if( isset( $_SESSION['popup'] ) ){
+  //     $_SESSION['popup'] += 1;
+  // }else{
+  //     $_SESSION['popup'] = 1;
+  // }
+  // $luotvao = $_SESSION['popup'];
+  // if ($luotvao == '1') {
   ?>
   <div class="loader">
     <div class="spinner-border text-primary" role="status">
       <span class="sr-only">Loading...</span>
     </div>
   </div>
-  <?php } ?>
+  <?php //} ?>
 
   <nav class="untree_co--site-mobile-menu">
     <div class="close-wrap d-flex">

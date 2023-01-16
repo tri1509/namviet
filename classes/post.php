@@ -25,8 +25,27 @@
             return $result;
         }
 
+        public function count_post_tin_tuc(){
+            $query = "SELECT * FROM tbl_post WHERE cat = 2";
+            $result = $this->db->select($query);
+            return $result;
+        }
+
         public function show_post_tin_tuc(){
-            $query = "SELECT * FROM tbl_post WHERE cat = 2 ORDER BY id DESC";
+            $so_sp_trang = 6;
+            if(!isset($_GET['trang'])) {
+                $trang = 1;
+            }else{
+                $trang = $_GET['trang'];
+            }
+            $so_trang = ($trang-1)*$so_sp_trang ;
+            $query = "SELECT * FROM tbl_post WHERE cat = 2 ORDER BY id DESC LIMIT $so_trang,$so_sp_trang";
+            $result = $this->db->select($query);
+            return $result;
+        }
+
+        public function show_post_tin_tuc_rand_4(){
+            $query = "SELECT * FROM tbl_post WHERE cat = 2 ORDER BY RAND() LIMIT 4";
             $result = $this->db->select($query);
             return $result;
         }
