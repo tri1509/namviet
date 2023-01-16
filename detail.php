@@ -29,7 +29,26 @@
     </div>
   </div>
   <?php 
-  echo $resule['noidung'] ;
+  if ($resule['id'] == 19){
+    echo $resule['noidung'];
+  }else{
   ?>
+  <div class="untree_co--site-section pb-0">
+    <div class="video_perform">
+      <div class="untree_co--site-section">
+        <div class="container">
+          <div class="row justify-content-center text-center pt-0 pb-5">
+            <div class="col-lg-6 section-heading">
+              <h3 class="text-center">
+                <?php echo $title ?>
+              </h3>
+            </div>
+          </div>
+          <?php echo $resule['noidung'] ?>
+        </div>
+      </div>
+    </div>
+  </div>
+  <?php } ?>
 </main>
 <?php include 'inc/footer.php' ?>

@@ -17,15 +17,9 @@
     <div class="card">
       <div class="card-header font-weight-bold d-flex justify-content-between align-items-center">
         <h5 class="m-0 ">Danh sách bài viết</h5>
-        <div class="form-search form-inline">
-          <form action="#">
-            <input type="" class="form-control form-search" placeholder="Tìm kiếm">
-            <input type="submit" name="btn-search" value="Tìm kiếm" class="btn btn-primary">
-          </form>
-        </div>
       </div>
       <div class="card-body">
-        <table class="table table-striped table-checkall">
+        <table class="table table-striped table-checkall" id="table-admin">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -75,25 +69,6 @@
             <?php } } ?>
           </tbody>
         </table>
-        <nav aria-label="Page navigation example">
-          <ul class="pagination">
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
-                <span aria-hidden="true">Trước</span>
-                <span class="sr-only">Sau</span>
-              </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-                <span class="sr-only">Next</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
       </div>
     </div>
   </div>

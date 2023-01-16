@@ -62,7 +62,7 @@
         }
 
         public function show_cat_post(){
-            $query = "SELECT * FROM tbl_cat_post ORDER BY id DESC";
+            $query = "SELECT * FROM tbl_cat_post ORDER BY position DESC";
             $result = $this->db->select($query);
             return $result;
         }

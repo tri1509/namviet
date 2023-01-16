@@ -7,6 +7,7 @@
   integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="//cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript">
 function ChangeToSlug() {
   var slug;
@@ -32,7 +33,26 @@ function ChangeToSlug() {
 </script>
 <script>
 $(function() {
-  $(".order_position").sortable({});
+  $(".order_position").sortable({
+    update: function(event, ui) {
+      var array_id = [];
+      $(".order_position tr").each(function() {
+        array_id.push($(this).attr('id'))
+      })
+      $.ajax({
+        url: "ajax/order_position.php",
+        method: "POST",
+        data: {
+          array_id: array_id
+        },
+        success: function(data) {
+          // alert('sắp xếp thành công !');
+          // alert(array_id);
+        }
+      })
+    }
+  });
+  $('#table-admin').DataTable();
 })
 </script>
 </body>

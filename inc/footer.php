@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 pr-md-5">
-        <h3>Vẻ Đệp Trường Tồn</h3>
+        <h3>Vẻ Đẹp Trường Tồn</h3>
         <p>Mang lại vẻ đẹp tinh tế,sang trọng,Phòng làm việc kết hợp phòng khách</p>
         <p><a href="#" class="readmore">Xem Thêm</a></p>
       </div>
@@ -15,8 +15,8 @@
               <li><a href="#">Thiết Kế Nội Thất</a></li>
               <li><a href="#">Công Trình</a></li>
               <li><a href="#">Cừa Hàng</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Liên Hệ</a></li>
+              <li><a href="ve-chung-toi">About Us</a></li>
+              <li><a href="lienn-he">Liên Hệ</a></li>
             </ul>
           </div>
           <div class="col-md-9 ml-auto">
@@ -31,8 +31,11 @@
                 </p>
               </div>
               <div class="col-md-6 ">
-              <h3>Vị Trí</h3>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.3402054040516!2d106.7446303153344!3d10.861708060582474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527ed4a6028bf%3A0x89573b1272723e7b!2zxJAuIFRhbSBIw6AsIFRhbSBQaMO6LCBUaOG7pyDEkOG7qWMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1673177875197!5m2!1svi!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <h3>Vị Trí</h3>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.3402054040516!2d106.7446303153344!3d10.861708060582474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527ed4a6028bf%3A0x89573b1272723e7b!2zxJAuIFRhbSBIw6AsIFRhbSBQaMO6LCBUaOG7pyDEkOG7qWMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1673177875197!5m2!1svi!2s"
+                  width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
           </div>

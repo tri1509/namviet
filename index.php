@@ -360,28 +360,30 @@
         <div class="w-75">
           <p>Mang lại vẻ đẹp tinh tế,sang trọng,Phòng làm việc kết hợp phòng khách.</p>
         </div>
-        <p><a href="#" class="readmore">Tất cả</a></p>
+        <p><a href="tin-tuc" class="readmore">Tất cả</a></p>
       </div>
       <div class="col-md-4">
         <div class="post-entry" data-aos="fade-up" data-aos-delay="100">
-          <a href="#" class="thumb"><img src="public/images/tc-congtrinh.jpg" alt="Image" class="img-fluid"></a>
+          <a href="chi-tiet/du-an-thi-cong" class="thumb"><img src="public/images/tc-congtrinh.jpg" alt="Image"
+              class="img-fluid"></a>
           <div class="post-entry-contents">
-            <h3><a href="#">Dự án thi công</a></h3>
-            <div class="date">December 20, 2019 &bullet; by <a href="#">Tác giả A</a></div>
+            <h3><a href="chi-tiet/du-an-thi-cong">Dự án thi công</a></h3>
+            <div class="date">December 20, 2019 &bullet; by <a href="#">Sang Nguyễn</a></div>
             <p>Mang lại vẻ đẹp tinh tế,sang trọng,Phòng làm việc kết hợp phòng khách.</p>
-            <p><a href="#" class="readmore">Xem Thêm</a></p>
+            <p><a href="chi-tiet/du-an-thi-cong" class="readmore">Xem Thêm</a></p>
           </div>
         </div>
       </div>
 
       <div class="col-md-4">
         <div class="post-entry" data-aos="fade-up" data-aos-delay="200">
-          <a href="#" class="thumb"><img src="public/images/tc-maylanh8.jpg" alt="Image" class="img-fluid"></a>
+          <a href="chi-tiet/may-lanh-lon-gom-nhung-gi" class="thumb"><img src="public/images/tc-maylanh8.jpg"
+              alt="Image" class="img-fluid"></a>
           <div class="post-entry-contents">
-            <h3><a href="#">Máy lạnh lớn gồm những gì ?</a></h3>
-            <div class="date">10 . 20, 2019 &bullet; by <a href="#">Tác Giả B</a></div>
+            <h3><a href="chi-tiet/may-lanh-lon-gom-nhung-gi">Máy lạnh lớn gồm những gì ?</a></h3>
+            <div class="date">10 . 20, 2019 &bullet; by <a href="#">Minh Trí</a></div>
             <p>Mang lại vẻ đẹp tinh tế,sang trọng,Phòng làm việc kết hợp phòng khách.</p>
-            <p><a href="#" class="readmore">Xem Thêm</a></p>
+            <p><a href="chi-tiet/may-lanh-lon-gom-nhung-gi" class="readmore">Xem Thêm</a></p>
           </div>
         </div>
       </div>
