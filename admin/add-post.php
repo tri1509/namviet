@@ -61,7 +61,7 @@
       <div class="card-body">
         <form method="post" enctype="multipart/form-data" action="add-post.php">
           <div class="row">
-            <div class="col-6">
+            <div class="col-md-6 col-12">
               <div class="form-group">
                 <label for="name">Tiêu đề bài viết</label>
                 <input class="form-control" type="text" name="name" id="slug" onkeyup="ChangeToSlug()"
@@ -82,6 +82,25 @@
                   <?php if(!empty($error['content'])) {echo $error['content'];} ?>
                 </span>
               </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="form-group">
+                <label for="">Danh mục bài viết</label>
+                <select class="form-control" name="cat">
+                  <option>----Chọn danh mục----</option>
+                  <?php
+                $cat = new category();
+                $list_cat = $cat -> show_cat_post();
+                if($list_cat){
+                  while($result = $list_cat->fetch_assoc()){
+              ?>
+                  <option value="<?php echo $result['id'] ?>"><?php echo $result['name'] ?></option>
+                  <?php }} ?>
+                </select>
+                <span class='text-danger'>
+                  <?php if(!empty($error['cat'])) {echo $error['cat'];} ?>
+                </span>
+              </div>
               <div class="form-group">
                 <label for="tomtat">Tóm tắt bài viết</label>
                 <input class="form-control" type="text" name="tomtat"
@@ -90,40 +109,21 @@
                   <?php if(!empty($error['tomtat'])) {echo $error['tomtat'];} ?>
                 </span>
               </div>
-            </div>
-            <div class="col-6">
               <div class="form-group">
-                <label for="intro">Code nội dung bài viết</label>
-                <textarea name="desc" class="form-control" id="intro"
-                  style="resize: none; height:200px"><?php if(!empty($desc)){echo $desc;}?></textarea>
+                <label for="img">Hình ảnh</label>
+                <input class="form-control" type="text" name="img" value="<?php if(!empty($img)){echo $img;}?>">
                 <span class='text-danger'>
-                  <?php if(!empty($error['desc'])) {echo $error['desc'];} ?>
+                  <?php if(!empty($error['img'])) {echo $error['img'];} ?>
                 </span>
               </div>
             </div>
           </div>
+
           <div class="form-group">
-            <label for="">Danh mục bài viết</label>
-            <select class="form-control" name="cat">
-              <option>----Chọn danh mục----</option>
-              <?php
-                $cat = new category();
-                $list_cat = $cat -> show_cat_post();
-                if($list_cat){
-                  while($result = $list_cat->fetch_assoc()){
-              ?>
-              <option value="<?php echo $result['id'] ?>"><?php echo $result['name'] ?></option>
-              <?php }} ?>
-            </select>
+            <label for="intro">Nội dung bài viết</label>
+            <textarea name="desc" class="ckeditor"><?php if(!empty($desc)){echo $desc;}?></textarea>
             <span class='text-danger'>
-              <?php if(!empty($error['cat'])) {echo $error['cat'];} ?>
-            </span>
-          </div>
-          <div class="form-group">
-            <label for="img">Hình ảnh</label>
-            <input class="form-control" type="text" name="img" value="<?php if(!empty($img)){echo $img;}?>">
-            <span class='text-danger'>
-              <?php if(!empty($error['img'])) {echo $error['img'];} ?>
+              <?php if(!empty($error['desc'])) {echo $error['desc'];} ?>
             </span>
           </div>
           <!-- <div class="input-group mb-3">
