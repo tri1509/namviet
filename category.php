@@ -99,31 +99,19 @@
             <div class="select_title">
               <ul>
                 <h2>MẪU CỬA GỖ</h2>
+                <?php
+                  $show_service_lv2 = $sv -> show_service_lv2('1');
+                  if($show_service_lv2){
+                    while($result_service_lv2 = $show_service_lv2 -> fetch_assoc()){
+                ?>
                 <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                     class="bi bi-chevron-right select_rigth" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                       d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                  </svg><a href="">THIẾT KẾ NỘI THẤT CHUNG CƯ</a></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-chevron-right select_rigth" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                  </svg><a href="">THIẾT KẾ NỘI THẤT NHÀ PHỐ</a></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-chevron-right select_rigth" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                  </svg><a href="">THIẾT KẾ NỘI THẤT PHÒNG BẾP</a></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-chevron-right select_rigth" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                  </svg><a href="">THIẾT KẾ NỘI THẤT PHÒNG KHÁCH</a></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-chevron-right select_rigth" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                  </svg><a href="">THIẾT KẾ NỘI THẤT PHÒNG NGỦ</a></li>
+                  </svg><a class="text-uppercase" href="dich-vu/<?php echo $result_service_lv2['slug'] ?>">thiết kế nội
+                    thất
+                    <?php echo $result_service_lv2['name'] ?></a></li>
+                <?php } } ?>
               </ul>
             </div>
             <div class="select_contact">
@@ -143,31 +131,19 @@
             <div class="select_title">
               <ul>
                 <h2>THI CÔNG MÁY LẠNH</h2>
+                <?php
+                  $show_service_lv2 = $sv -> show_service_lv2('2');
+                  if($show_service_lv2){
+                    while($result_service_lv2 = $show_service_lv2 -> fetch_assoc()){
+                ?>
                 <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                     class="bi bi-chevron-right select_rigth" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                       d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                  </svg><a href="">MÁY LẠNH CHUNG CƯ</a></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-chevron-right select_rigth" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                  </svg><a href="">MÁY LẠNH NHÀ PHỐ</a></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-chevron-right select_rigth" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                  </svg><a href="">MÁY LẠNH PHÒNG BẾP</a></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-chevron-right select_rigth" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                  </svg><a href="">MÁY LẠNH PHÒNG KHÁCH</a></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-chevron-right select_rigth" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                  </svg><a href="">MÁY LẠNH PHÒNG NGỦ</a></li>
+                  </svg><a class="text-uppercase"
+                    href="dich-vu/<?php echo $result_service_lv2['slug'] ?>"><?php echo $result_service_lv2['name'] ?></a>
+                </li>
+                <?php } } ?>
               </ul>
             </div>
             <div class="select_contact ">
@@ -187,31 +163,19 @@
             <div class="select_title">
               <ul>
                 <h2>PHONG CÁCH THIẾT KẾ</h2>
+                <?php
+                  $show_service_lv2 = $sv -> show_service_lv2('3');
+                  if($show_service_lv2){
+                    while($result_service_lv2 = $show_service_lv2 -> fetch_assoc()){
+                ?>
                 <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                     class="bi bi-chevron-right select_rigth" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                       d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                  </svg><a href="">CÁC PHONG CÁCH THIẾT KẾ</a></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-chevron-right select_rigth" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                  </svg><a href="">BẮC ÂU</a></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-chevron-right select_rigth" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                  </svg><a href="">CỔ ĐIỂN</a></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-chevron-right select_rigth" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                  </svg><a href="">CÔNG NGHIỆP</a></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-chevron-right select_rigth" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                  </svg><a href="">HIỆN ĐẠI</a></li>
+                  </svg><a class="text-uppercase"
+                    href="dich-vu/<?php echo $result_service_lv2['slug'] ?>"><?php echo $result_service_lv2['name'] ?></a>
+                </li>
+                <?php } } ?>
               </ul>
             </div>
             <div class="select_contact">

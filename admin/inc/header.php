@@ -4,6 +4,7 @@
   if (isset($_GET['action']) && $_GET['action'] == 'logout') {
     Session::destroy();
   }
+  ob_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -86,6 +87,19 @@
               <li><a href="add-post.php">Thêm mới</a></li>
               <li><a href="list-post.php">Danh sách</a></li>
               <li><a href="cat-post.php">Danh mục</a></li>
+            </ul>
+          </li>
+          <li class="nav-link active">
+            <a href="list-product.php">
+              <div class="nav-link-icon d-inline-flex">
+                <i class="far fa-folder"></i>
+              </div>
+              Dịch vụ
+            </a>
+            <i class="arrow fas fa-angle-down"></i>
+            <ul class="sub-menu">
+              <li><a href="add-service.php">Dịch vụ</a></li>
+              <li><a href="add-service-lv2.php">Các loại dịch vụ</a></li>
             </ul>
           </li>
           <li class="nav-link active">

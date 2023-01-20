@@ -29,6 +29,7 @@
               <th scope="col">Danh mục</th>
               <th scope="col">Content</th>
               <th scope="col">Nội dung</th>
+              <th scope="col">Ngày viết</th>
               <th scope="col">Tác vụ</th>
             </tr>
           </thead>
@@ -55,8 +56,9 @@
               <td><?php echo $resule['content'] ?></td>
               <td><?php
             $htmlspecialchars = $fm -> textShorten($resule['noidung'],100);
-            echo htmlspecialchars($htmlspecialchars);
-            ?></td>
+            echo htmlspecialchars($htmlspecialchars) ?></td>
+              <td><?php echo $resule['times'] ?></td>
+
               <td>
                 <a href="edit-post.php?postid=<?php echo $resule['id'] ?>"
                   class="btn btn-success btn-sm rounded-0 text-white" type="button" data-toggle="tooltip"

@@ -14,7 +14,8 @@
   $product = new product();
   $ps = new post();
   $ct = new contact();
-  
+	$sv = new service();
+
   $uri = $_SERVER['REQUEST_URI'];
   $query = $_SERVER['QUERY_STRING'];
   $domain = $_SERVER['HTTP_HOST'];
@@ -95,38 +96,31 @@
             <li class="has-children <?php if($url == $base."dich-vu"){echo "active";} ?>">
               <a href="dich-vu">Dịch Vụ</a>
               <ul class="dropdown">
+                <?php
+                  $show_service = $sv -> show_service();
+                  if($show_service){
+                    while($result_service = $show_service->fetch_assoc()){
+                ?>
                 <li class="has-children">
                   <a href="">
-                    Thiết kế
+                    <?php echo $result_service['name'] ?>
                   </a>
                   <ul class="dropdown">
+                    <?php
+                      $parent = $result_service['id'];
+                      $show_service_lv2 = $sv -> show_service_lv2($parent);
+                      if($show_service_lv2){
+                        while($result_service_lv2 = $show_service_lv2 -> fetch_assoc()){
+                    ?>
                     <li>
-                      <a href="#">Thiết Kế Nội Thất A</a>
+                      <a href="dich-vu/<?php echo $result_service_lv2['slug'] ?>">
+                        <?php echo $result_service_lv2['name'] ?>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#">Thiết Kế Nội Thất B</a>
-                    </li>
-                    <li>
-                      <a href="#">Thiết Kế Nội Thất C</a>
-                    </li>
+                    <?php }} ?>
                   </ul>
                 </li>
-                <li class="has-children">
-                  <a href="">
-                    Trang Trí
-                  </a>
-                  <ul class="dropdown">
-                    <li>
-                      <a href="#">Trang Trí Nội Thất A</a>
-                    </li>
-                    <li>
-                      <a href="#">Trang Trí Nội Thất B</a>
-                    </li>
-                    <li>
-                      <a href="#">Trang Trí Nội Thất C</a>
-                    </li>
-                  </ul>
-                </li>
+                <?php }} ?>
               </ul>
             </li>
             <li class="has-children <?php if($url == $base."san-pham"){echo "active";} ?>">
@@ -135,23 +129,12 @@
                 <?php
                 $show_cat = $cat -> show_category();
                 if($show_cat){
-                    while($result = $show_cat->fetch_assoc()){
+                    while($result_cat = $show_cat->fetch_assoc()){
                 ?>
                 <li class="has-children">
-                  <a href="san-pham/<?php echo $result['slug'] ?>">
-                    <?php echo $result['cat_name'] ?>
+                  <a href="san-pham/<?php echo $result_cat['slug'] ?>">
+                    <?php echo $result_cat['cat_name'] ?>
                   </a>
-                  <ul class="dropdown">
-                    <li>
-                      <a href="#">Thiết Kế A</a>
-                    </li>
-                    <li>
-                      <a href="#">Thiết Kế B</a>
-                    </li>
-                    <li>
-                      <a href="#">Thiết Kế C</a>
-                    </li>
-                  </ul>
                 </li>
                 <?php }} ?>
               </ul>

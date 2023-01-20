@@ -20,7 +20,7 @@
         }
 
         public function show_post_noi_that(){
-            $query = "SELECT * FROM tbl_post WHERE cat = 1 ORDER BY id DESC";
+            $query = "SELECT * FROM tbl_post WHERE cat = 1 ORDER BY times DESC";
             $result = $this->db->select($query);
             return $result;
         }
@@ -39,7 +39,7 @@
                 $trang = $_GET['trang'];
             }
             $so_trang = ($trang-1)*$so_sp_trang ;
-            $query = "SELECT * FROM tbl_post WHERE cat = 2 ORDER BY id DESC LIMIT $so_trang,$so_sp_trang";
+            $query = "SELECT * FROM tbl_post WHERE cat = 2 ORDER BY times DESC LIMIT $so_trang,$so_sp_trang";
             $result = $this->db->select($query);
             return $result;
         }

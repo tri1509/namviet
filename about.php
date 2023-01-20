@@ -3,7 +3,7 @@
   include 'inc/header.php';
 ?>
 <main class="untree_co--site-main">
-  <div class="untree_co--site-hero inner-page bg-light" style="background-image: url('public/images/pn3.jpg')">
+  <div class="untree_co--site-hero inner-page bg-light" .style="background-image: url('public/images/pn3.jpg')">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-9">
