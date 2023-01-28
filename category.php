@@ -119,7 +119,7 @@
                 class="bi bi-chevron-right select_rigth" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
                   d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-              </svg><a href="#">LIÊN HỆ BÁO GIÁ</a>
+              </svg><a href="lien-he">LIÊN HỆ BÁO GIÁ</a>
             </div>
           </div>
           <div class="col-xl-4 select_info">
@@ -151,7 +151,7 @@
                 class="bi bi-chevron-right select_rigth" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
                   d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-              </svg><a href="#">LIÊN HỆ BÁO GIÁ</a>
+              </svg><a href="lien-he">LIÊN HỆ BÁO GIÁ</a>
             </div>
           </div>
           <div class="col-xl-4 select_info">
@@ -183,7 +183,7 @@
                 class="bi bi-chevron-right select_rigth" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
                   d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-              </svg><a href="#">LIÊN HỆ BÁO GIÁ</a>
+              </svg><a href="lien-he">LIÊN HỆ BÁO GIÁ</a>
             </div>
           </div>
         </div>
@@ -204,7 +204,6 @@
             <div class="col-md-8 py-5">
               <h3 class="display-4 heading">Thiết Kế Cửa Nam Việt</h3>
               <div class="room-exerpt">
-                <!-- <div class="room-price mb-4">$200<span class="per">/night</span></div> -->
                 <p>Thiết Kế Nội Thất Chug Cư – Bạn đang phân vân không biết nên chọn phong cách thiết kế nội thất phòng
                   khách nào cho ngôi nhà của mình? . Dưới đây là danh sách tổng hợp các xu hướng thiết kế không gian tốt
                   nhất sẽ khiến cho ngôi nhà của bạn trở nên rực rỡ và tiện nghi. Có rất nhiều hình mẫu tham khảo cho
@@ -286,8 +285,11 @@
                       <li>Cam kết 100% sử dụng nguyên vật liệu đã báo giá</li>
                       <li>Chỉnh chu đến từng chi tiết</li>
                       <li>Có cam kết bảo hành sau xây dựng</li>
-                      <li><a href="" style="color: black; font-size: 1rem; border-bottom: 1px solid black;">Liên Hệ Báo
-                          Giá. </a></li>
+                      <li>
+                        <a href="lien-he" style="color: black; font-size: 1rem; border-bottom: 1px solid black;">
+                          Liên Hệ Báo Giá
+                        </a>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -391,9 +393,11 @@
                       <li>Cam kết 100% sử dụng nguyên vật liệu đã báo giá</li>
                       <li>Chỉnh chu đến từng chi tiết</li>
                       <li>Có cam kết bảo hành sau xây dựng</li>
-                      <li><a href="" style="color: black; font-size: 1rem; border-bottom: 1px solid black;">Liên Hệ Báo
-                          Giá. </a></li>
-
+                      <li>
+                        <a href="lien-he" style="color: black; font-size: 1rem; border-bottom: 1px solid black;">
+                          Liên Hệ Báo Giá
+                        </a>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -489,9 +493,11 @@
                       <li>Cam kết 100% sử dụng nguyên vật liệu đã báo giá</li>
                       <li>Chỉnh chu đến từng chi tiết</li>
                       <li>Có cam kết bảo hành sau xây dựng</li>
-                      <li><a href="" style="color: black; font-size: 1rem; border-bottom: 1px solid black;">Liên Hệ Báo
-                          Giá. </a></li>
-
+                      <li>
+                        <a href="lien-he" style="color: black; font-size: 1rem; border-bottom: 1px solid black;">
+                          Liên Hệ Báo Giá
+                        </a>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -544,8 +550,6 @@
           </div>
         </div>
       </div>
-
-
     </div>
 
     <div class="container-fluid px-md-0">

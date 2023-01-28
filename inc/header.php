@@ -101,8 +101,8 @@
                   if($show_service){
                     while($result_service = $show_service->fetch_assoc()){
                 ?>
-                <li class="has-children">
-                  <a href="">
+                <li class="has-children text-capitalize">
+                  <a href="dich-vu/<?php echo $result_service['slug'] ?>">
                     <?php echo $result_service['name'] ?>
                   </a>
                   <ul class="dropdown">
@@ -113,7 +113,7 @@
                         while($result_service_lv2 = $show_service_lv2 -> fetch_assoc()){
                     ?>
                     <li>
-                      <a href="dich-vu/<?php echo $result_service_lv2['slug'] ?>">
+                      <a href="dich-vu/<?php echo $result_service['slug'] ?>/<?php echo $result_service_lv2['slug'] ?>">
                         <?php echo $result_service_lv2['name'] ?>
                       </a>
                     </li>

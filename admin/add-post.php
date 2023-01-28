@@ -46,6 +46,7 @@
         'desc' => $desc,
         'slug' => $slug,
         'img' => $img,
+        'status' => $status
       );
       $insertPost = $ps->insert_post($data,$_FILES);
     }
@@ -126,15 +127,21 @@
               <?php if(!empty($error['desc'])) {echo $error['desc'];} ?>
             </span>
           </div>
-          <!-- <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Tải ảnh lên</span>
+          <div class="form-group">
+            <label for="">Trạng thái</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="status" id="status1" value="0">
+              <label class="form-check-label" for="status1">
+                Ẩn
+              </label>
             </div>
-            <div class="custom-file">
-              <input type="file" class="custom-file-input" id="inputGroupFile01" name="img">
-              <label class="custom-file-label" for="inputGroupFile01"></label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="status" id="status2" value="1" checked>
+              <label class="form-check-label" for="status2">
+                Công khai
+              </label>
             </div>
-          </div> -->
+          </div>
           <input type="submit" class="btn btn-primary" value="Thêm mới" name="submit">
         </form>
       </div>

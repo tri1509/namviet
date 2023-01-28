@@ -30,6 +30,7 @@
               <th scope="col">Content</th>
               <th scope="col">Nội dung</th>
               <th scope="col">Ngày viết</th>
+              <th scope="col">Trạng thái</th>
               <th scope="col">Tác vụ</th>
             </tr>
           </thead>
@@ -58,7 +59,13 @@
             $htmlspecialchars = $fm -> textShorten($resule['noidung'],100);
             echo htmlspecialchars($htmlspecialchars) ?></td>
               <td><?php echo $resule['times'] ?></td>
-
+              <td><?php 
+                $status = $resule['status'];
+                if($status == 0){
+                  echo "Ẩn";
+                }else{
+                  echo "Công khai";
+                } ?></td>
               <td>
                 <a href="edit-post.php?postid=<?php echo $resule['id'] ?>"
                   class="btn btn-success btn-sm rounded-0 text-white" type="button" data-toggle="tooltip"

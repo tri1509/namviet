@@ -43,49 +43,58 @@
                 <input class="form-control" type="text" name="content" id="content"
                   value="<?php echo $result['content'] ?>">
               </div>
+
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label for="">Danh mục</label>
+                <select class="form-control" id="category" name="cat">
+                  <option>----Chọn danh mục----</option>
+                  <?php
+                  if($list_cat){
+                      while($result_cat = $list_cat->fetch_assoc()){
+                ?>
+                  <option <?php 
+                  if($result['cat'] === $result_cat['id']) {
+                    echo "selected";
+                  }
+                ?> value="<?php echo $result_cat['id'] ?>"><?php echo $result_cat['name'] ?></option>
+                  <?php }} ?>
+                </select>
+              </div>
               <div class="form-group">
                 <label for="name">Tóm tắt bài viết</label>
                 <input class="form-control" type="text" name="tomtat" id="tomtat"
                   value="<?php echo $result['tomtat'] ?>">
               </div>
-            </div>
-            <div class="col-6">
               <div class="form-group">
-                <label for="intro">Code nội dung bài viết</label>
-                <textarea name="desc" class="form-control" id="intro"
-                  style="resize: none; height:200px"><?php echo $result['noidung'] ?></textarea>
+                <label for="img">Hỉnh ảnh</label>
+                <input class="form-control" type="text" name="img" id="img" value="<?php echo $result['img'] ?>">
               </div>
             </div>
           </div>
           <div class="form-group">
-            <label for="">Danh mục</label>
-            <select class="form-control" id="category" name="cat">
-              <option>----Chọn danh mục----</option>
-              <?php
-                  if($list_cat){
-                      while($result_cat = $list_cat->fetch_assoc()){
-                ?>
-              <option <?php 
-                  if($result['cat'] === $result_cat['id']) {
-                    echo "selected";
-                  }
-                ?> value="<?php echo $result_cat['id'] ?>"><?php echo $result_cat['name'] ?></option>
-              <?php }} ?>
-            </select>
+            <label for="intro">Nội dung bài viết</label>
+            <textarea name="desc" class="ckeditor" id="intro"
+              style="resize: none; height:200px"><?php echo $result['noidung'] ?></textarea>
           </div>
           <div class="form-group">
-            <label for="img">Hỉnh ảnh</label>
-            <input class="form-control" type="text" name="img" id="img" value="<?php echo $result['img'] ?>">
+            <label for="">Trạng thái</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="status" id="status1" value="0"
+                <?php if($result['status'] == 0){ echo "checked" ; } ?>>
+              <label class="form-check-label" for="status1">
+                Ẩn
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="status" id="status2" value="1"
+                <?php if($result['status'] == 1){ echo "checked" ; } ?>>
+              <label class="form-check-label" for="status2">
+                Công khai
+              </label>
+            </div>
           </div>
-          <!-- <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Tải ảnh lên</span>
-            </div>
-            <div class="custom-file">
-              <input type="file" class="custom-file-input" id="inputGroupFile01" name="img">
-              <label class="custom-file-label" for="inputGroupFile01">Chọn file</label>
-            </div>
-          </div> -->
           <img src="../public/images/<?php echo $result['img'] ?>" alt="" width="250"><br>
           <input type="submit" class="btn btn-primary" value="Cập nhật" name="submit">
         </form>

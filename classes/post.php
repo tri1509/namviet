@@ -20,13 +20,13 @@
         }
 
         public function show_post_noi_that(){
-            $query = "SELECT * FROM tbl_post WHERE cat = 1 ORDER BY times DESC";
+            $query = "SELECT * FROM tbl_post WHERE cat = 1 AND status = 1 ORDER BY times DESC";
             $result = $this->db->select($query);
             return $result;
         }
 
         public function count_post_tin_tuc(){
-            $query = "SELECT * FROM tbl_post WHERE cat = 2";
+            $query = "SELECT * FROM tbl_post WHERE cat = 2 AND status = 1";
             $result = $this->db->select($query);
             return $result;
         }
@@ -39,13 +39,13 @@
                 $trang = $_GET['trang'];
             }
             $so_trang = ($trang-1)*$so_sp_trang ;
-            $query = "SELECT * FROM tbl_post WHERE cat = 2 ORDER BY times DESC LIMIT $so_trang,$so_sp_trang";
+            $query = "SELECT * FROM tbl_post WHERE cat = 2 AND status = 1 ORDER BY times DESC LIMIT $so_trang,$so_sp_trang";
             $result = $this->db->select($query);
             return $result;
         }
 
         public function show_post_tin_tuc_rand_4(){
-            $query = "SELECT * FROM tbl_post WHERE cat = 2 ORDER BY RAND() LIMIT 4";
+            $query = "SELECT * FROM tbl_post WHERE cat = 2 AND status = 1 ORDER BY RAND() LIMIT 4";
             $result = $this->db->select($query);
             return $result;
         }
@@ -64,6 +64,7 @@
             $tomtat = mysqli_real_escape_string($this->db->link,$data['tomtat']);
             $content = mysqli_real_escape_string($this->db->link,$data['content']);
             $img = mysqli_real_escape_string($this->db->link,$data['img']);
+            $status = mysqli_real_escape_string($this->db->link,$data['status']);
             // $permited = array('jpg','jpeg','png','gif');
             // $file_name = $_FILES['img']['name'];
             // $file_size = $_FILES['img']['size'];
@@ -101,7 +102,8 @@
                 tomtat = '$tomtat',
                 content = '$content',
                 img = '$img',
-                noidung = '$desc'
+                noidung = '$desc',
+                status = '$status'
                 WHERE id = '$id' ";
             $result = $this->db->update($query);
             if($result){
@@ -139,6 +141,7 @@
             $tomtat = mysqli_real_escape_string($this->db->link,$data['tomtat']);
             $content = mysqli_real_escape_string($this->db->link,$data['content']);
             $img = mysqli_real_escape_string($this->db->link,$data['img']);
+            $status = mysqli_real_escape_string($this->db->link,$data['status']);
             // $permited = array('jpg','jpeg','png','gif');
             // $file_name = $_FILES['img']['name'];
             // $file_size = $_FILES['img']['size'];
@@ -148,7 +151,7 @@
             // $unique_image = substr(md5(time()),0,10).'.'.$file_ext;
             // $uploaded_image = "../public/images/".$unique_image;
             // move_uploaded_file($file_temp,$uploaded_image);
-            $query = "INSERT INTO tbl_post(name,slug,cat,tomtat,content,noidung,img) VALUES('$name','$slug','$cat','$tomtat','$content','$desc','$img')";
+            $query = "INSERT INTO tbl_post(name,slug,cat,tomtat,content,noidung,img,status) VALUES('$name','$slug','$cat','$tomtat','$content','$desc','$img','$status')";
             $result = $this->db->insert($query);
             if($result){
                 header('location:list-post.php');
