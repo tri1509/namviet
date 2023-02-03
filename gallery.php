@@ -18,7 +18,7 @@
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center">
           <div class="site-hero-contents" data-aos="fade-up">
-            <h1 class="hero-heading text-white">Tin Tức & Sự Kiện</h1>
+            <h1 class="hero-heading text-black">Tin Tức & Sự Kiện</h1>
           </div>
         </div>
       </div>

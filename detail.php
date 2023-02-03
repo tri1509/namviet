@@ -16,13 +16,13 @@
   include 'inc/header.php';
 ?>
 <main class="untree_co--site-main">
-  <div class="untree_co--site-hero inner-page"
+  <div class="untree_co--site-hero inner-page min-h-50"
     style="background-image: url('public/images/<?php echo $resule_banner['img'] ?>')">
     <div class="container">
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center">
           <div class="site-hero-contents" data-aos="fade-up">
-            <h1 class="hero-heading text-white"><?php echo $title ?></h1>
+            <!-- <h1 class="hero-heading text-white"><?php echo $title ?></h1> -->
           </div>
         </div>
       </div>
@@ -33,7 +33,7 @@
     echo $resule['noidung'];
   }else{
   ?>
-  <div class="untree_co--site-section pb-0">
+  <div class="untree_co--site-section untree_co--site-section-pd-0">
     <div class="video_perform">
       <div class="untree_co--site-section">
         <div class="container">

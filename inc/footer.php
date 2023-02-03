@@ -79,8 +79,8 @@
   <div class="container">
     <div class="row justify-content-center align-items-center text-center">
       <div class="col-md-12">
-        <form action="#">
-          <input type="search" name="s" id="s" placeholder="Type a keyword and hit enter..." autocomplete="false">
+        <form action="tim-kiem" method="post">
+          <input type="search" name="s" id="s" placeholder="Bạn muốn tìm gì..." autocomplete="false">
         </form>
       </div>
     </div>

@@ -13,6 +13,19 @@
             $this->fm = new Format();
         }
 
+        public function timkiem($tukhoa){
+            $tukhoa = $this->fm->validation($tukhoa);
+            if(empty($tukhoa) || $tukhoa == '') {
+                echo "<p class='nomargin text-uppercase clredt'>Mời bạn nhập đầy đủ</p>";
+            }else{
+            // $query = "SELECT * FROM tbl_sanpham WHERE sanpham_name OR sanpham_mota OR sanpham_chitiet LIKE '%$tukhoa%' ";
+            $query = "SELECT * FROM tbl_post WHERE MATCH(name) AGAINST ('%$tukhoa%') OR MATCH(content) AGAINST ('%$tukhoa%') OR MATCH(tomtat) AGAINST ('%$tukhoa%') ";
+            $result = $this->db->select($query);
+            return $result;
+            }
+
+        }
+
         public function rand_banner(){
             $query = "SELECT * FROM tbl_banner ORDER BY rand() LIMIT 1";
             $result = $this->db->select($query);

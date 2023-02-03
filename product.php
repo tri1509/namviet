@@ -121,7 +121,7 @@ include 'inc/header.php';
         </div>
       </div>
     </div>
-    <div class="countUp">
+    <!-- <div class="countUp">
       <div class="Counter Counter_menber">
         <div class="Counter_img">
           <img src="public/images/icon-duan.png" alt="">
@@ -154,7 +154,7 @@ include 'inc/header.php';
         <h1>95</h1>
         <h2>Đánh Giá Hài Lòng</h2>
       </div>
-    </div>
+    </div> -->
     <script>
     var mb = document.querySelector(".Counter_menber h1");
     var gt = document.querySelector(".Counter_ghetham h1");

@@ -9,8 +9,8 @@ setTimeout(function () {
 $(function () {
   "use strict";
 
-  $(".loader").delay(200).fadeOut("slow");
-  $("#untree_co--overlayer").delay(200).fadeOut("slow");
+  $(".loader").delay(700).fadeOut("slow");
+  $("#untree_co--overlayer").delay(700).fadeOut("slow");
 
   var jarallaxPlugin = function () {
     objectFitImages();
@@ -95,28 +95,28 @@ $(function () {
       }
     });
 
-    $("body").on("click", ".js-menu-toggle", function (e) {
-      var $this = $(this);
-      e.preventDefault();
+    // $('body').on('click', '.js-menu-toggle', function(e) {
+    // 	var $this = $(this);
+    // 	e.preventDefault();
 
-      if ($("body").hasClass("offcanvas")) {
-        $("body").removeClass("offcanvas");
-        $this.removeClass("active");
-      } else {
-        $("body").addClass("offcanvas");
-        $this.addClass("active");
-      }
-    });
+    // 	if ( $('body').hasClass('offcanvas') ) {
+    // 		$('body').removeClass('offcanvas');
+    // 		$this.removeClass('active');
+    // 	} else {
+    // 		$('body').addClass('offcanvas');
+    // 		$this.addClass('active');
+    // 	}
+    // })
 
-    // click outisde offcanvas
-    $(document).mouseup(function (e) {
-      var container = $(".untree_co--site-mobile-menu");
-      if (!container.is(e.target) && container.has(e.target).length === 0) {
-        if ($("body").hasClass("offcanvas")) {
-          $("body").removeClass("offcanvas");
-        }
-      }
-    });
+    // // click outisde offcanvas
+    // $(document).mouseup(function(e) {
+    //    var container = $(".untree_co--site-mobile-menu");
+    //    if (!container.is(e.target) && container.has(e.target).length === 0) {
+    //      if ( $('body').hasClass('offcanvas') ) {
+    // 			$('body').removeClass('offcanvas');
+    // 		}
+    //    }
+    // });
   };
   siteMenuClone();
 

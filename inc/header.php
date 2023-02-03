@@ -85,7 +85,7 @@
   </nav>
   <div class="untree_co--site-wrap">
     <nav
-      class="untree_co--site-nav js-sticky-nav <?php if($url == $base."ve-chung-toi" || $url == $base."lien-he"){echo "dark";} ?>">
+      class="untree_co--site-nav js-sticky-nav <?php if($url == $base."ve-chung-toi" || $url == $base."lien-he" || $url == $base."tim-kiem"){echo "dark";} ?>">
       <div class="container d-flex align-items-center">
         <div class="logo-wrap">
           <a href="./" class="untree_co--site-logo">Nam Việt</a>
@@ -147,20 +147,14 @@
           </ul>
         </div>
         <div class="icons-wrap text-md-right">
+
           <ul class="icons-top d-none d-lg-block">
             <li class="mr-4">
               <a href="#" class="js-search-toggle"><span class="icon-search2"></span></a>
             </li>
-            <!-- <li>
-              <a href="#"><span class="icon-facebook"></span></a>
-            </li>
-            <li>
-              <a href="#"><span class="icon-twitter"></span></a>
-            </li>
-            <li>
-              <a href="#"><span class="icon-instagram"></span></a>
-            </li> -->
           </ul>
+
+          <!-- Mobile Toggle -->
           <a href="#" class="d-block d-lg-none burger js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
             <span></span>
           </a>
