@@ -127,6 +127,7 @@
             }
         }
         public function get_detail($slug){
+            $slug = mysqli_real_escape_string($this->db->link,$slug);
             $query = "SELECT * FROM tbl_post WHERE slug = '$slug' LIMIT 1";
             $result = $this->db->select($query);
             return $result;

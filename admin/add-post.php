@@ -37,6 +37,7 @@
       $cat = $_POST['cat'];
     }
     $slug = $_POST['slug'];
+    $status = $_POST['status'];
     if(empty($error)){
       $data = array(
         'name' => $name,

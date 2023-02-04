@@ -6,7 +6,10 @@
         <div class="row align-items-center justify-content-center">
           <div class="col-md-8">
             <div class="site-hero-contents text-center" data-aos="fade-up">
-              <h1 class="hero-heading">Thiết Kế nội thất Nam Việt</h1>
+              <h1 class="title font-weight-bold text-white">
+                <span>Nam Việt</span><br>
+                <span>Make your house a home !</span>
+              </h1>
             </div>
           </div>
         </div>
@@ -85,12 +88,12 @@
 </div>
 <div class="container">
   <div class="product-ct">
-    <h1>NHỮNG SẢN PHẨM & DỊCH VỤ NỔI BẬT CỦA NAM VIỆT .</h1>
+    <h3 class="mb-5 mt-5 text-center font-weight-bold">NHỮNG SẢN PHẨM & DỊCH VỤ NỔI BẬT CỦA NAM VIỆT</h3>
     <div class="product-ct-header">
       <div class="row">
         <div class="col-xl-6">
           <div class="ct-text">
-            <h2>MẪU CỬA GỖ TỰ NHIÊN .</h2>
+            <h3>MẪU CỬA GỖ TỰ NHIÊN</h3>
             <div class="clear20"></div>
             <div class="ct-text-title">
               <p style="text-overflow: ellipsis; ">
@@ -106,12 +109,31 @@
         </div>
         <div class="col-xl-6">
           <div class="ct-images">
-            <div class="ct-img" style="
-                      background-image: url(public/images/tc-cua2.jpg);
-                      background-size: cover;
-                      background-position: center;
-                      width: 100%;
-                      height: 300px;
+            <div class="ct-img"
+              style="background-image: url(public/images/tc-cua2.jpg); background-size: cover;background-position: center; width: 100%; height: 300px">
+            </div>
+            <div class="clear20"></div>
+            <div class="ct-img-title">
+              <a href="">Bar&counter Stools ></a>
+            </div>
+          </div>
+          <div class="clear20"></div>
+        </div>
+        <div class="col-xl-3 col-6">
+          <div class="ct-images">
+            <div class="ct-img"
+              style="background-image: url(public/images/tc-cua1.jpg);background-size: cover;background-position: center;width: 100%;height: 300px;">
+            </div>
+            <div class="clear20"></div>
+            <div class="ct-img-title">
+              <a href="">Bar&counter Stools ></a>
+            </div>
+          </div>
+          <div class="clear20"></div>
+        </div>
+        <div class="col-xl-3 col-6">
+          <div class="ct-images">
+            <div class="ct-img" style="background-image: url(public/images/tc-cua3.jpg);background-size: cover;background-position: center;width: 100%;height: 300px;
                     "></div>
             <div class="clear20"></div>
             <div class="ct-img-title">
@@ -120,15 +142,11 @@
           </div>
           <div class="clear20"></div>
         </div>
-        <div class="col-xl-3">
+        <div class="col-xl-3 col-6">
           <div class="ct-images">
-            <div class="ct-img" style="
-                      background-image: url(public/images/tc-cua1.jpg);
-                      background-size: cover;
-                      background-position: center;
-                      width: 100%;
-                      height: 300px;
-                    "></div>
+            <div class="ct-img"
+              style="background-image: url(public/images/tc-cua.jpg);background-size: cover;background-position: center;width: 100%;height: 300px;">
+            </div>
             <div class="clear20"></div>
             <div class="ct-img-title">
               <a href="">Bar&counter Stools ></a>
@@ -136,31 +154,11 @@
           </div>
           <div class="clear20"></div>
         </div>
-        <div class="col-xl-3">
+        <div class="col-xl-3 col-6">
           <div class="ct-images">
-            <div class="ct-img" style="
-                      background-image: url(public/images/tc-cua3.jpg);
-                      background-size: cover;
-                      background-position: center;
-                      width: 100%;
-                      height: 300px;
-                    "></div>
-            <div class="clear20"></div>
-            <div class="ct-img-title">
-              <a href="">Bar&counter Stools ></a>
+            <div class="ct-img"
+              style="background-image: url(public/images/tc-cua2.jpg);background-size: cover;background-position: center;width: 100%;height: 300px;">
             </div>
-          </div>
-          <div class="clear20"></div>
-        </div>
-        <div class="col-xl-3">
-          <div class="ct-images">
-            <div class="ct-img" style="
-                      background-image: url(public/images/tc-cua.jpg);
-                      background-size: cover;
-                      background-position: center;
-                      width: 100%;
-                      height: 300px;
-                    "></div>
             <div class="clear20"></div>
             <div class="ct-img-title">
               <a href="">Bar&counter Stools ></a>
@@ -173,11 +171,9 @@
   </div>
 </div>
 <div class="clear40"></div>
-<div class="product-ct-nav" style="
-          background-image: url(public/images/header-demo1.jpg);
-          background-size: cover;
-          background-position: center;
-        "></div>
+<div class="product-ct-nav"
+  style="background-image: url(public/images/header-demo1.jpg);background-size: cover;background-position: center;">
+</div>
 <div class="untree_co--site-section float-left pb-0 featured-rooms">
   <div class="container pt-0 pb-5">
     <div class="row justify-content-center text-center">

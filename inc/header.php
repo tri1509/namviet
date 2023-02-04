@@ -8,13 +8,14 @@
   spl_autoload_register(function($class){
       include_once "classes/".$class.".php";
   });
+
   $db = new Database();
   $fm = new Format();
+  $sv = new service();
+  $ps = new post();
   $cat = new category();
   $product = new product();
-  $ps = new post();
   $ct = new contact();
-	$sv = new service();
 
   $uri = $_SERVER['REQUEST_URI'];
   $query = $_SERVER['QUERY_STRING'];
@@ -54,15 +55,15 @@
 <body>
   <div id="untree_co--overlayer"></div>
   <?php
-  // if (session_id() === '')
-  // session_start();
-  // if( isset( $_SESSION['popup'] ) ){
-  //     $_SESSION['popup'] += 1;
-  // }else{
-  //     $_SESSION['popup'] = 1;
-  // }
-  // $luotvao = $_SESSION['popup'];
-  // if ($luotvao == '1') {
+//   if (session_id() === '')
+//   session_start();
+//   if( isset( $_SESSION['popup'] ) ){
+//       $_SESSION['popup'] += 1;
+//   }else{
+//       $_SESSION['popup'] = 1;
+//   }
+//   $luotvao = $_SESSION['popup'];
+//   if ($luotvao == '1') {
   ?>
   <div class="loader">
     <div class="spinner-border text-primary" role="status">
@@ -70,7 +71,6 @@
     </div>
   </div>
   <?php //} ?>
-
   <nav class="untree_co--site-mobile-menu">
     <div class="close-wrap d-flex">
       <a href="#" class="d-flex ml-auto js-menu-toggle">
@@ -93,6 +93,7 @@
         <div class="site-nav-ul-wrap text-center d-none d-lg-block">
           <ul class="site-nav-ul js-clone-nav">
             <li class='<?php if($url == $base){echo "active";} ?>'><a href="./">Trang Chủ</a></li>
+
             <li class="has-children <?php if($url == $base."dich-vu"){echo "active";} ?>">
               <a href="dich-vu">Dịch Vụ</a>
               <ul class="dropdown">
@@ -123,6 +124,8 @@
                 <?php }} ?>
               </ul>
             </li>
+
+
             <li class="has-children <?php if($url == $base."san-pham"){echo "active";} ?>">
               <a href="san-pham">Sản phẩm</a>
               <ul class="dropdown">
